@@ -10,7 +10,7 @@
 
 [sub_resource type="Environment" id="Environment_an6f7"]
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.15
+volumetric_fog_density = 0.2
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6faoy"]
 
