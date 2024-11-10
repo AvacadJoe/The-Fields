@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://xxlk6qa43xa5"]
+
+[ext_resource type="ArrayMesh" uid="uid://c1l51pyqvnu54" path="res://blender-assets/ghost.obj" id="1_tsdkc"]
+[ext_resource type="Script" path="res://scripts/ghost_movement.gd" id="2_53ss8"]
+
+[node name="Ghost" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24043, 2.59632, 9.88158)
+mesh = ExtResource("1_tsdkc")
+script = ExtResource("2_53ss8")
