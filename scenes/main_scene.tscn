@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bx6la3a5qcip7" path="res://3d-assets/tree__imported.tscn" id="1_mu1t6"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player.tscn" id="2_4sucl"]
 [ext_resource type="Shader" path="res://shaders/grass.gdshader" id="2_xx67n"]
-[ext_resource type="ArrayMesh" path="res://3d-assets/GrassMesh.res" id="3_gq458"]
+[ext_resource type="ArrayMesh" uid="uid://c06v0iev5yiru" path="res://3d-assets/GrassMesh.res" id="3_gq458"]
 [ext_resource type="Shader" path="res://shaders/dither.gdshader" id="3_j4x27"]
 [ext_resource type="Texture2D" uid="uid://ckjifeok1wrto" path="res://shaders/2bit-demichrome-1x.png" id="4_fx888"]
 [ext_resource type="PackedScene" uid="uid://xxlk6qa43xa5" path="res://characters/ghost.tscn" id="5_xu52k"]
