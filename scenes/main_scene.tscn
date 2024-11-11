@@ -10,7 +10,9 @@
 
 [sub_resource type="Environment" id="Environment_an6f7"]
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.2
+volumetric_fog_density = 0.3158
+volumetric_fog_albedo = Color(0.913725, 0.937255, 0.92549, 1)
+volumetric_fog_sky_affect = 0.0
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6faoy"]
 
@@ -60,7 +62,7 @@ shader_parameter/quantize_size = 2.0
 shader_parameter/handle_scale = null
 shader_parameter/handle_subpixels = true
 shader_parameter/dither_enabled = true
-shader_parameter/bayer_pattern = 1.0
+shader_parameter/bayer_pattern = 2.0
 shader_parameter/divisions = 1.0
 shader_parameter/contrast = 1.0
 shader_parameter/shift = 0.0
@@ -76,7 +78,14 @@ camera_attributes = SubResource("CameraAttributesPractical_6faoy")
 compositor = SubResource("Compositor_5md3v")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.076643, 0)
+light_color = Color(0.913725, 0.937255, 0.92549, 1)
+light_volumetric_fog_energy = 1.5
+light_angular_distance = 0.5
+shadow_enabled = true
+shadow_bias = 1.918
+shadow_normal_bias = 10.0
+shadow_opacity = 0.9
+shadow_blur = 0.927
 sky_mode = 1
 
 [node name="Environment" type="Node3D" parent="."]
