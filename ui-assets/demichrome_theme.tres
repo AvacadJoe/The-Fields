@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ckuambmp8imqj"]
+
+[ext_resource type="FontFile" uid="uid://v3lg4ehfnfqf" path="res://ui-assets/fonts/FFFHARMO.TTF" id="2_38wr2"]
+[ext_resource type="StyleBox" uid="uid://d2o07w0ht7hbq" path="res://ui-assets/DemichromePanel.tres" id="2_pmlec"]
+[ext_resource type="Texture2D" uid="uid://dnlryi350fov8" path="res://ui-assets/selected-panel.png" id="3_iatmt"]
+[ext_resource type="Texture2D" uid="uid://dtvhdflr80qf7" path="res://ui-assets/deselected-panel.png" id="4_ui173"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3erl4"]
+texture = ExtResource("3_iatmt")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uknft"]
+texture = ExtResource("4_ui173")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_38wr2")
+Button/styles/disabled = ExtResource("2_pmlec")
+Button/styles/focus = SubResource("StyleBoxTexture_3erl4")
+Button/styles/hover = ExtResource("2_pmlec")
+Button/styles/normal = SubResource("StyleBoxTexture_uknft")
+Button/styles/pressed = ExtResource("2_pmlec")
+Panel/styles/panel = ExtResource("2_pmlec")
+RichTextLabel/fonts/normal_font = ExtResource("2_38wr2")

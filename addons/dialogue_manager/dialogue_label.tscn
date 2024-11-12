@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckvgyvclnwggo"]
+[gd_scene load_steps=3 format=3 uid="uid://ckvgyvclnwggo"]
 
+[ext_resource type="Theme" uid="uid://ckuambmp8imqj" path="res://ui-assets/demichrome_theme.tres" id="1_4ww56"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="1_cital"]
 
 [node name="DialogueLabel" type="RichTextLabel"]
@@ -7,6 +8,7 @@ anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 mouse_filter = 1
+theme = ExtResource("1_4ww56")
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
