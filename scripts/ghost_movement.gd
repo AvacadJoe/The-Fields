@@ -4,15 +4,21 @@ extends MeshInstance3D
 @export var ghost_delay = 0.5
 @export var float_time = 1
 @export var rotate_speed = 1
+@export var ghost_dialogue : DialogueResource
+
+
 var cur_y
 var cur_z
 var cur_x
 
 func _ready():
+   
     cur_z = self.position.z
     cur_y = self.position.y
     cur_x = self.position.x
     tween_up()
+    await get_tree().process_frame
+    %DialogueMenu.start(ghost_dialogue, "this_is_a_node_title")
 
 func _process(delta):
     self.rotate_y(rotate_speed*delta)
