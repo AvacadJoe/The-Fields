@@ -7,3 +7,8 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24043, 2.59632, 9.88158)
 mesh = ExtResource("1_tsdkc")
 script = ExtResource("2_53ss8")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.468171, 0)
+light_volumetric_fog_energy = 2.0
+omni_range = 3.0
