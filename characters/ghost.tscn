@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://xxlk6qa43xa5"]
+[gd_scene load_steps=7 format=3 uid="uid://xxlk6qa43xa5"]
 
 [ext_resource type="ArrayMesh" uid="uid://c1l51pyqvnu54" path="res://blender-assets/ghost.obj" id="1_tsdkc"]
 [ext_resource type="Script" path="res://scripts/ghost_movement.gd" id="2_53ss8"]
+[ext_resource type="Texture2D" uid="uid://4lr16mj0p1lh" path="res://ui-assets/interactable.png" id="3_8hlqm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_eu0n7"]
+radius = 4.29895
+
+[sub_resource type="QuadMesh" id="QuadMesh_xl0da"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bpsm"]
+transparency = 1
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("3_8hlqm")
+texture_filter = 0
+disable_receive_shadows = true
+billboard_mode = 1
+billboard_keep_scale = true
 
 [node name="Ghost" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24043, 2.59632, 9.88158)
@@ -12,3 +28,16 @@ script = ExtResource("2_53ss8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.468171, 0)
 light_volumetric_fog_energy = 2.0
 omni_range = 3.0
+
+[node name="InteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+shape = SubResource("SphereShape3D_eu0n7")
+
+[node name="InteractIcon" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0464115, 1.91661, 0.00217628)
+visible = false
+cast_shadow = 0
+ignore_occlusion_culling = true
+mesh = SubResource("QuadMesh_xl0da")
+surface_material_override/0 = SubResource("StandardMaterial3D_3bpsm")

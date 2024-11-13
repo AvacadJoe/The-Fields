@@ -30,7 +30,8 @@ var dialogue_line: DialogueLine:
 
         # The dialogue has finished so close the balloon
         if not next_dialogue_line:
-            queue_free()
+            %Player.in_convo = false
+            balloon.hide()
             return
 
         # If the node isn't ready yet then none of the labels will be ready yet either
@@ -98,8 +99,9 @@ func _ready() -> void:
 
 func _unhandled_input(_event: InputEvent) -> void:
     # Only the balloon is allowed to handle input while it's showing
-    get_viewport().set_input_as_handled()
-    if Input.is_action_just_pressed("ui_accept"): next(dialogue_line.next_id)
+    if(%Player.in_convo):
+        get_viewport().set_input_as_handled()
+        if Input.is_action_just_pressed("ui_accept"): next(dialogue_line.next_id)
     
 
 func _notification(what: int) -> void:
@@ -118,6 +120,7 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
     is_waiting_for_input = false
     resource = dialogue_resource
     self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
+    %Player.in_convo = true
 
 
 ## Go to the next line
@@ -139,6 +142,7 @@ func _on_mutated(_mutation: Dictionary) -> void:
 
 
 func _on_balloon_gui_input(event: InputEvent) -> void:
+    
     # See if we need to skip typing of the dialogue
     if dialogue_label.is_typing:
         var mouse_was_clicked: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()
@@ -152,7 +156,7 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
     if dialogue_line.responses.size() > 0: return
 
     # When there are no response options the balloon itself is the clickable thing
-    #get_viewport().set_input_as_handled()
+    get_viewport().set_input_as_handled()
 
     if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
         next(dialogue_line.next_id)

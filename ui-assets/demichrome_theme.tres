@@ -21,7 +21,7 @@ texture_margin_bottom = 3.0
 region_rect = Rect2(0, 0, 32, 32)
 
 [resource]
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 24
 Button/fonts/font = ExtResource("2_38wr2")
 Button/styles/disabled = ExtResource("2_pmlec")
 Button/styles/focus = SubResource("StyleBoxTexture_3erl4")
@@ -29,4 +29,5 @@ Button/styles/hover = ExtResource("2_pmlec")
 Button/styles/normal = SubResource("StyleBoxTexture_uknft")
 Button/styles/pressed = ExtResource("2_pmlec")
 Panel/styles/panel = ExtResource("2_pmlec")
+RichTextLabel/font_sizes/normal_font_size = 24
 RichTextLabel/fonts/normal_font = ExtResource("2_38wr2")

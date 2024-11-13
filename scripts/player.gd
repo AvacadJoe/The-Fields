@@ -18,8 +18,28 @@ var look_dir: Vector2 # Input direction for look/aim
 var walk_vel: Vector3 # Walking velocity 
 var grav_vel: Vector3 # Gravity velocity 
 var jump_vel: Vector3 # Jumping velocity
+var in_convo = false :
+    set (value):
+        in_convo = value
+        if value:
+            %InteractLabel.visible = !value
+            release_mouse()
+        else:
+            capture_mouse()
+    get:
+        return in_convo
+
+signal interact()
 
 @onready var camera: Camera3D = $Camera
+
+var interactable = false :
+    set (value):
+        %InteractLabel.visible = value            
+        interactable = value
+    get:
+        return interactable
+
 
 func _ready() -> void:
     capture_mouse()
@@ -30,6 +50,7 @@ func _unhandled_input(event: InputEvent) -> void:
         if mouse_captured: _rotate_camera()
     if Input.is_action_just_pressed("jump"): jumping = true
     if Input.is_action_just_pressed("exit"): get_tree().quit()
+    if Input.is_action_just_pressed("interact"): interact.emit()
 
 func _physics_process(delta: float) -> void:
     if mouse_captured: _handle_joypad_camera_rotation(delta)
