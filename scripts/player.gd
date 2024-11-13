@@ -55,7 +55,8 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
     if mouse_captured: _handle_joypad_camera_rotation(delta)
     velocity = _walk(delta) + _gravity(delta) + _jump(delta)
-    move_and_slide()
+    if not in_convo:
+        move_and_slide()
     
     # Push the Character Position to the Shader
     var grass_node = %GrassMultiMesh
