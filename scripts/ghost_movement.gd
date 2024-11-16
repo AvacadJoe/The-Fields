@@ -21,7 +21,6 @@ var cur_z
 var cur_x
 
 func _ready():
-   
     cur_z = self.position.z
     cur_y = self.position.y
     cur_x = self.position.x

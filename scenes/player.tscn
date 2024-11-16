@@ -31,7 +31,8 @@ particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_lfqnc"]
 material = SubResource("StandardMaterial3D_w4wrw")
-size = Vector2(0.02, 0.08)
+size = Vector2(0.04, 0.16)
+subdivide_width = 1
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_xh3bb")

@@ -18,6 +18,7 @@ var look_dir: Vector2 # Input direction for look/aim
 var walk_vel: Vector3 # Walking velocity 
 var grav_vel: Vector3 # Gravity velocity 
 var jump_vel: Vector3 # Jumping velocity
+
 var in_convo = false :
     set (value):
         in_convo = value
@@ -30,6 +31,7 @@ var in_convo = false :
         return in_convo
 
 signal interact()
+signal player_position_change(player_position)
 
 @onready var camera: Camera3D = $Camera
 
@@ -59,8 +61,7 @@ func _physics_process(delta: float) -> void:
         move_and_slide()
     
     # Push the Character Position to the Shader
-    var grass_node = %GrassMultiMesh
-    grass_node.set_deferred("instance_shader_parameters/player_position", position + Vector3(0, -0.1, 0))
+    player_position_change.emit(self.global_position)
 
 func capture_mouse() -> void:
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
