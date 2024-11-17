@@ -9,6 +9,11 @@ extends WorldEnvironment
 @export var game_area_radius = 200
 
 @onready var light = $DirectionalLight3D
+
+func _ready():
+    self.environment.volumetric_fog_enabled = true
+    pass
+
 func _process(delta):
     var player_dist_from_center = (global_center-%Player.global_position).length()   
    

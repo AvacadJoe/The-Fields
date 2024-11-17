@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cjj7080r8w6k7"
+path="res://.godot/imported/Death.obj-0cd3cdba629d787d1103e3795eacd247.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Death.obj-0cd3cdba629d787d1103e3795eacd247.mesh"]
+
+source_file="res://blender-assets/Death.obj"
+dest_files=["res://.godot/imported/Death.obj-0cd3cdba629d787d1103e3795eacd247.mesh", "res://.godot/imported/Death.obj-0cd3cdba629d787d1103e3795eacd247.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

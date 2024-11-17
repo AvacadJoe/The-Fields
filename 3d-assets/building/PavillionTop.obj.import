@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6uekc8asxq1v"
+path="res://.godot/imported/PavillionTop.obj-ef42fe8439ff23e0eda41b4d0caf7090.mesh"
+
+[deps]
+
+files=["res://.godot/imported/PavillionTop.obj-ef42fe8439ff23e0eda41b4d0caf7090.mesh"]
+
+source_file="res://3d-assets/building/PavillionTop.obj"
+dest_files=["res://.godot/imported/PavillionTop.obj-ef42fe8439ff23e0eda41b4d0caf7090.mesh", "res://.godot/imported/PavillionTop.obj-ef42fe8439ff23e0eda41b4d0caf7090.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

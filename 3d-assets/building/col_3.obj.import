@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://doqx1tkjd5n38"
+path="res://.godot/imported/col_3.obj-cba3bdafd591b0b9085464785ec78a6c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/col_3.obj-cba3bdafd591b0b9085464785ec78a6c.mesh"]
+
+source_file="res://3d-assets/building/col_3.obj"
+dest_files=["res://.godot/imported/col_3.obj-cba3bdafd591b0b9085464785ec78a6c.mesh", "res://.godot/imported/col_3.obj-cba3bdafd591b0b9085464785ec78a6c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

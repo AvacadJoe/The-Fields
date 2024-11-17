@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dusmnbsokuu3v"]
 
-[ext_resource type="ArrayMesh" uid="uid://cjj7080r8w6k7" path="res://3d-assets/Death.obj" id="1_l7nb8"]
+[ext_resource type="ArrayMesh" uid="uid://cjj7080r8w6k7" path="res://blender-assets/Death.obj" id="1_l7nb8"]
 
 [node name="Death" type="MeshInstance3D"]
 transform = Transform3D(0.819902, 0, 0.572504, 0, 1, 0, -0.572504, 0, 0.819902, 4.56307, 4.18312, 24.9647)
