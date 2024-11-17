@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dw6j6pdl8ekog"
+path="res://.godot/imported/death_loop.dialogue-64d0fa556a054a1bdce01bd91144222d.tres"
+
+[deps]
+
+source_file="res://dialogue/death_loop.dialogue"
+dest_files=["res://.godot/imported/death_loop.dialogue-64d0fa556a054a1bdce01bd91144222d.tres"]
+
+[params]
+
+defaults=true

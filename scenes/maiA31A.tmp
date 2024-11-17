@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=41 format=3 uid="uid://cnvynlmj5xjqq"]
 
 [ext_resource type="Script" path="res://scenes/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
@@ -7,10 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://ckjifeok1wrto" path="res://shaders/2bit-demichrome-1x.png" id="4_fx888"]
 [ext_resource type="PackedScene" uid="uid://xxlk6qa43xa5" path="res://characters/ghost.tscn" id="5_xu52k"]
 [ext_resource type="Texture2D" uid="uid://4lr16mj0p1lh" path="res://ui-assets/interactable.png" id="7_1sdut"]
-[ext_resource type="Resource" uid="uid://dqtptoafuw6rs" path="res://dialogue/death_intro.dialogue" id="7_iti1r"]
 [ext_resource type="Material" uid="uid://d0y41lk8qgs4r" path="res://shaders/death_cloth.tres" id="7_j7cch"]
 [ext_resource type="PackedScene" uid="uid://bx6la3a5qcip7" path="res://3d-assets/nature/tree__imported.tscn" id="7_je5ba"]
-[ext_resource type="Resource" uid="uid://dw6j6pdl8ekog" path="res://dialogue/death_loop.dialogue" id="8_836id"]
 [ext_resource type="Script" path="res://scenes/death.gd" id="8_cw1yp"]
 [ext_resource type="Resource" uid="uid://dhgwt08x53i55" path="res://dialogue/test_dialogue.dialogue" id="8_dk3tx"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="8_rrvs2"]
@@ -189,9 +187,6 @@ surface_material_override/0 = ExtResource("7_j7cch")
 surface_material_override/1 = ExtResource("7_j7cch")
 script = ExtResource("8_cw1yp")
 rotation_speed = 0.2
-interact_rotation_speed = 1.0
-death_dialogue_1 = ExtResource("7_iti1r")
-death_dialogue_2 = ExtResource("8_836id")
 
 [node name="InteractArea" type="Area3D" parent="Environment/Characters/Death"]
 
@@ -199,7 +194,7 @@ death_dialogue_2 = ExtResource("8_836id")
 shape = SubResource("SphereShape3D_iqwb8")
 
 [node name="InteractIcon" type="MeshInstance3D" parent="Environment/Characters/Death"]
-transform = Transform3D(0.999999, 0, -4.47035e-08, 0, 0.999999, 0, 4.47035e-08, 0, 0.999999, 1.39295, 4.29569, 0.00908907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0464115, 4.19762, 0.00217628)
 visible = false
 cast_shadow = 0
 ignore_occlusion_culling = true

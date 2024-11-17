@@ -1,0 +1,20 @@
+~ death_intro
+You: Where am I? Who am I? 
+???: Ah, it seems you have forgotten again. You are in the Fields of Asphodel, where the souls of ordinary people gather after death.
+You: The Fields of Asphodel... it's coming back to me a bit. So I'm dead??
+???: Yes, but you're in good company here. We're all dead I'm afraid.
+~ convo_loop
+- Who are you?
+	You: And who are you?
+	???: I'm just a traveler, who likes to listen to others stories.
+- What am I doing here?
+	You: What am I doing here?
+	???: Hmmm. A good question, and one I think you'll need to figure it out yourself.
+	???: But while you're here, you might as well talk to the other spirits.
+- How long have I been here?
+	You: How long have I been here?
+	???: I'm not sure how long any of us have been here.  It all... blurs together after a while.
+- End the conversation => END
+=> convo_loop
+???: I'll be seeing you around.
+=> END
