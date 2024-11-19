@@ -1,7 +1,30 @@
-[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://dxtre7v6pjhb2"]
+[gd_resource type="ArrayMesh" load_steps=9 format=4 uid="uid://dxtre7v6pjhb2"]
 
 [ext_resource type="Material" uid="uid://dhx8s3uet3i25" path="res://shaders/asphodel_plant.tres" id="1_w2vju"]
+[ext_resource type="Shader" path="res://shaders/Asphodel.gdshader" id="2_2maga"]
 [ext_resource type="Material" uid="uid://bjw585uwwvylr" path="res://shaders/asphodel_flower.tres" id="2_vgiiu"]
+
+[sub_resource type="Gradient" id="Gradient_ldmev"]
+offsets = PackedFloat32Array(0, 0.352941)
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ufcew"]
+gradient = SubResource("Gradient_ldmev")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_f1qbg"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ciu4g"]
+noise = SubResource("FastNoiseLite_f1qbg")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6e2ix"]
+render_priority = 0
+shader = ExtResource("2_2maga")
+shader_parameter/wind_direction = Vector3(-0.4, 0.3, 0.8)
+shader_parameter/wind_strength = 0.0
+shader_parameter/wind_noise_size = 0.05
+shader_parameter/wind_noise_speed = 0.1
+shader_parameter/color_ramp = SubResource("GradientTexture1D_ufcew")
+shader_parameter/wind_noise = SubResource("NoiseTexture2D_ciu4g")
 
 [resource]
 _surfaces = [{
@@ -22,7 +45,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 48,
 "index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8ADwANABAAEQASABMAEwASABQAFQAWABcAFwAWABgAGQAaABsAGwAaABwAHAAaAB0A"),
-"material": ExtResource("1_w2vju"),
+"material": SubResource("ShaderMaterial_6e2ix"),
 "name": "None",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

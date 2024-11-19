@@ -1,6 +1,6 @@
-[gd_scene load_steps=45 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=44 format=3 uid="uid://cnvynlmj5xjqq"]
 
-[ext_resource type="Script" path="res://scenes/world_environment.gd" id="1_a3uyp"]
+[ext_resource type="Script" path="res://scripts/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player.tscn" id="2_4sucl"]
 [ext_resource type="Shader" path="res://shaders/dither.gdshader" id="3_j4x27"]
@@ -11,7 +11,7 @@
 [ext_resource type="Material" uid="uid://d0y41lk8qgs4r" path="res://shaders/death_cloth.tres" id="7_j7cch"]
 [ext_resource type="PackedScene" uid="uid://bx6la3a5qcip7" path="res://3d-assets/nature/tree__imported.tscn" id="7_je5ba"]
 [ext_resource type="Resource" uid="uid://dw6j6pdl8ekog" path="res://dialogue/death_loop.dialogue" id="8_836id"]
-[ext_resource type="Script" path="res://scenes/death.gd" id="8_cw1yp"]
+[ext_resource type="Script" path="res://scripts/death.gd" id="8_cw1yp"]
 [ext_resource type="Resource" uid="uid://dhgwt08x53i55" path="res://dialogue/test_dialogue.dialogue" id="8_dk3tx"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="8_rrvs2"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="8_ugo2m"]
@@ -60,14 +60,13 @@ albedo_color = Color(0.285167, 0.232, 0.29, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_6jixy"]
 size = Vector3(600, 100, 1)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_xbvex"]
-radius = 25.0
+[sub_resource type="CylinderMesh" id="CylinderMesh_wig2k"]
+top_radius = 25.0
+bottom_radius = 32.0
+height = 4.0
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_quyfj"]
-radius = 29.0
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_8wslb"]
-radius = 27.0
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uhfrx"]
+points = PackedVector3Array(0, -2, -32, -3.13861, -2, -31.8496, 0, -0.400157, -29.206, 3.13234, -2, -31.8496, -3.00078, -1.20008, -30.4589, -6.24589, -2, -31.3861, 0, 1.19969, -26.4056, 2.99452, -1.20008, -30.4589, 6.23962, -2, -31.3861, -2.45576, 2, -24.8833, -5.15583, 1.19969, -25.8982, -9.29053, -2, -30.628, 0, 2, -25.0023, 2.44949, 2, -24.8833, 5.14957, 1.19969, -25.8982, 9.28426, -2, -30.628, -4.88019, 2, -24.52, -8.48238, -0.400157, -27.9468, -7.26077, 2, -23.9248, -12.2475, -2, -29.5693, 4.87392, 2, -24.52, 7.2545, 2, -23.9248, 8.47612, -0.400157, -27.9468, 12.2412, -2, -29.5693, -10.1049, 1.19969, -24.3947, -9.57244, 2, -23.0979, -15.0854, -2, -28.2224, -13.7698, -0.400157, -25.7541, -11.7901, 2, -22.0517, 9.56617, 2, -23.0979, 10.0987, 1.19969, -24.3947, 11.7839, 2, -22.0517, 13.7635, -0.400157, -25.7541, 15.0791, -2, -28.2224, -17.7792, -2, -26.6124, -13.8951, 2, -20.7925, 13.8888, 2, -20.7925, 17.7729, -2, -26.6124, -20.3038, -2, -24.7392, -17.6413, 0.399765, -21.4941, -15.8622, 2, -19.3265, 15.8559, 2, -19.3265, 17.6351, 0.399765, -21.4941, 20.2976, -2, -24.7392, -22.628, -2, -22.628, -17.6789, 2, -17.6789, 17.6727, 2, -17.6789, 22.6218, -2, -22.628, -24.7392, -2, -20.3038, -21.4941, 0.399765, -17.6413, -19.3265, 2, -15.8622, 19.3203, 2, -15.8622, 21.4879, 0.399765, -17.6413, 24.733, -2, -20.3038, -20.7925, 2, -13.8951, -26.6124, -2, -17.7792, 20.7862, 2, -13.8951, 26.6061, -2, -17.7792, -25.7541, -0.400157, -13.7698, -22.0517, 2, -11.7901, -28.2224, -2, -15.0854, 22.0454, 2, -11.7901, 25.7478, -0.400157, -13.7698, 28.2161, -2, -15.0854, -29.5693, -2, -12.2475, -24.3947, 1.19969, -10.1049, -23.0979, 2, -9.57244, 23.0916, 2, -9.57244, 24.3884, 1.19969, -10.1049, 29.563, -2, -12.2475, -30.628, -2, -9.29053, -27.9468, -0.400157, -8.48238, -23.9248, 2, -7.26077, 23.9186, 2, -7.26077, 27.9405, -0.400157, -8.48238, 30.6218, -2, -9.29053, -31.3861, -2, -6.24589, -25.8982, 1.19969, -5.15583, -24.52, 2, -4.88019, 24.5137, 2, -4.88019, 25.8919, 1.19969, -5.15583, 31.3798, -2, -6.24589, -31.8496, -2, -3.13861, -30.4589, -1.20008, -3.00078, -24.8833, 2, -2.45576, 24.8771, 2, -2.45576, 30.4526, -1.20008, -3.00078, 31.8434, -2, -3.13861, -32, -2, 0, -29.206, -0.400157, 0, -26.4056, 1.19969, 0, -25.0023, 2, 0, 24.9961, 2, 0, 26.3994, 1.19969, 0, 32, -2, 0, -31.8496, -2, 3.13234, -30.4589, -1.20008, 2.99452, -24.8833, 2, 2.44949, 24.8771, 2, 2.44949, 30.4526, -1.20008, 2.99452, 31.8434, -2, 3.13234, -31.3861, -2, 6.23962, -25.8982, 1.19969, 5.14957, -24.52, 2, 4.87392, 24.5137, 2, 4.87392, 25.8919, 1.19969, 5.14957, 31.3798, -2, 6.23962, -30.628, -2, 9.28426, -27.9468, -0.400157, 8.47612, -23.9248, 2, 7.2545, 23.9186, 2, 7.2545, 27.9405, -0.400157, 8.47612, 30.6218, -2, 9.28426, -29.5693, -2, 12.2412, -24.3947, 1.19969, 10.0987, -23.0979, 2, 9.56617, 23.0916, 2, 9.56617, 24.3884, 1.19969, 10.0987, 29.563, -2, 12.2412, -28.2224, -2, 15.0791, -25.7541, -0.400157, 13.7635, -22.0517, 2, 11.7839, 22.0454, 2, 11.7839, 25.7478, -0.400157, 13.7635, 28.2161, -2, 15.0791, -26.6124, -2, 17.7729, -20.7925, 2, 13.8888, 20.7862, 2, 13.8888, 26.6061, -2, 17.7729, -24.7392, -2, 20.2976, -21.4941, 0.399765, 17.6351, -19.3265, 2, 15.8559, 21.4879, 0.399765, 17.6351, 24.733, -2, 20.2976, 19.3203, 2, 15.8559, -22.628, -2, 22.6218, -17.6789, 2, 17.6727, 22.6218, -2, 22.6218, 17.6727, 2, 17.6727, -20.3038, -2, 24.733, -17.6413, 0.399765, 21.4879, -15.8622, 2, 19.3203, 20.2976, -2, 24.733, 17.6351, 0.399765, 21.4879, 15.8559, 2, 19.3203, -17.7792, -2, 26.6061, -13.8951, 2, 20.7862, 17.7729, -2, 26.6061, 13.8888, 2, 20.7862, -15.0854, -2, 28.2161, -13.7698, -0.400157, 25.7478, -11.7901, 2, 22.0454, 13.7635, -0.400157, 25.7478, 15.0791, -2, 28.2161, 11.7839, 2, 22.0454, -12.2475, -2, 29.563, -10.1049, 1.19969, 24.3884, -9.57244, 2, 23.0916, 12.2412, -2, 29.563, 10.0987, 1.19969, 24.3884, 9.56617, 2, 23.0916, -9.29053, -2, 30.6218, -8.48238, -0.400157, 27.9405, -7.26077, 2, 23.9186, 9.28426, -2, 30.6218, 8.47612, -0.400157, 27.9405, 7.2545, 2, 23.9186, -6.24589, -2, 31.3798, -5.15583, 1.19969, 25.8919, -4.88019, 2, 24.5137, 5.14957, 1.19969, 25.8919, 6.23962, -2, 31.3798, 4.87392, 2, 24.5137, -3.13861, -2, 31.8434, -3.00078, -1.20008, 30.4526, -2.45576, 2, 24.8771, 2.44949, 2, 24.8771, 2.99452, -1.20008, 30.4526, 3.13234, -2, 31.8434, 0, -2, 32, 0, 1.19969, 26.3994, 0, 2, 24.9961)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_h3e4i"]
 material = ExtResource("9_qdtev")
@@ -79,6 +78,7 @@ height = 3.0
 material = ExtResource("9_qdtev")
 top_radius = 27.0
 bottom_radius = 27.0
+height = 2.5
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_r81rb"]
 material = ExtResource("9_qdtev")
@@ -677,22 +677,14 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.51446, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Pavillion/Pavillion Base"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468819, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D"]
-shape = SubResource("CylinderShape3D_xbvex")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.04879, 0)
+visible = false
+mesh = SubResource("CylinderMesh_wig2k")
 
-[node name="StaticBody3D3" type="StaticBody3D" parent="Environment/Pavillion/Pavillion Base"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468819, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87628, 0)
-shape = SubResource("CylinderShape3D_quyfj")
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="Environment/Pavillion/Pavillion Base"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468819, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.14566, 0)
-shape = SubResource("CylinderShape3D_8wslb")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.04879, 0)
+shape = SubResource("ConvexPolygonShape3D_uhfrx")
 
 [node name="Base" type="MeshInstance3D" parent="Environment/Pavillion/Pavillion Base"]
 mesh = SubResource("CylinderMesh_h3e4i")
