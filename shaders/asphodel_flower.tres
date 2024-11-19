@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bjw585uwwvylr"]
+
+[ext_resource type="Shader" path="res://scenes/Asphodel.gdshader" id="1_40mw0"]
+
+[sub_resource type="Gradient" id="Gradient_vtvdr"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uknm3"]
+gradient = SubResource("Gradient_vtvdr")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_40mw0")
+shader_parameter/fog_val = 0.01
+shader_parameter/color_ramp = SubResource("GradientTexture1D_uknm3")

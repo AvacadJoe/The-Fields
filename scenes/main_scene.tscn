@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=45 format=3 uid="uid://cnvynlmj5xjqq"]
 
 [ext_resource type="Script" path="res://scenes/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
@@ -32,8 +32,8 @@ volumetric_fog_sky_affect = 0.0
 
 [sub_resource type="Compositor" id="Compositor_5md3v"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_iqwb8"]
-radius = 6.168
+[sub_resource type="SphereShape3D" id="SphereShape3D_d1vnp"]
+radius = 10.1637
 
 [sub_resource type="QuadMesh" id="QuadMesh_yeeuy"]
 
@@ -63,7 +63,11 @@ size = Vector3(600, 100, 1)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_xbvex"]
 radius = 25.0
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_pqgp1"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_quyfj"]
+radius = 29.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8wslb"]
+radius = 27.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_h3e4i"]
 material = ExtResource("9_qdtev")
@@ -73,8 +77,13 @@ height = 3.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_bqckb"]
 material = ExtResource("9_qdtev")
-top_radius = 26.0
-bottom_radius = 26.0
+top_radius = 27.0
+bottom_radius = 27.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r81rb"]
+material = ExtResource("9_qdtev")
+top_radius = 29.0
+bottom_radius = 29.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_woyaf"]
 height = 25.364
@@ -182,7 +191,7 @@ skeleton = NodePath("../../..")
 ghost_dialogue = ExtResource("8_dk3tx")
 
 [node name="Death" type="MeshInstance3D" parent="Environment/Characters"]
-transform = Transform3D(-0.789077, 0, 0.131749, 0, 0.8, 0, -0.131749, 0, -0.789077, 0, 3.24396, 0)
+transform = Transform3D(-0.789077, 0, 0.131749, 0, 0.8, 0, -0.131749, 0, -0.789077, 0, 4.8417, 0)
 mesh = ExtResource("13_mtlvl")
 skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("7_j7cch")
@@ -196,7 +205,7 @@ death_dialogue_2 = ExtResource("8_836id")
 [node name="InteractArea" type="Area3D" parent="Environment/Characters/Death"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Characters/Death/InteractArea"]
-shape = SubResource("SphereShape3D_iqwb8")
+shape = SubResource("SphereShape3D_d1vnp")
 
 [node name="InteractIcon" type="MeshInstance3D" parent="Environment/Characters/Death"]
 transform = Transform3D(0.999999, 0, -4.47035e-08, 0, 0.999999, 0, 4.47035e-08, 0, 0.999999, 1.39295, 4.29569, 0.00908907)
@@ -661,27 +670,42 @@ transform = Transform3D(-0.528422, 0, 0.72854, 0, 0.9, 0, -0.72854, 0, -0.528422
 transform = Transform3D(0.274718, 0, 0.751352, 0, 0.8, 0, -0.751352, 0, 0.274718, 0.982822, -0.717533, -118.762)
 
 [node name="Pavillion" type="Node3D" parent="Environment"]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.51446, 0)
 
 [node name="Pavillion Base" type="Node3D" parent="Environment/Pavillion"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Pavillion/Pavillion Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468819, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D"]
 shape = SubResource("CylinderShape3D_xbvex")
 
+[node name="StaticBody3D3" type="StaticBody3D" parent="Environment/Pavillion/Pavillion Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468819, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87628, 0)
+shape = SubResource("CylinderShape3D_quyfj")
+
 [node name="StaticBody3D2" type="StaticBody3D" parent="Environment/Pavillion/Pavillion Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468819, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pavillion/Pavillion Base/StaticBody3D2"]
-shape = SubResource("SphereShape3D_pqgp1")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.14566, 0)
+shape = SubResource("CylinderShape3D_8wslb")
 
 [node name="Base" type="MeshInstance3D" parent="Environment/Pavillion/Pavillion Base"]
 mesh = SubResource("CylinderMesh_h3e4i")
 skeleton = NodePath("../..")
 
 [node name="Base2" type="MeshInstance3D" parent="Environment/Pavillion/Pavillion Base"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0505733, 0.0817337, -0.0164337)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0505733, -0.715255, -0.0164337)
 mesh = SubResource("CylinderMesh_bqckb")
+skeleton = NodePath("../..")
+
+[node name="Base3" type="MeshInstance3D" parent="Environment/Pavillion/Pavillion Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0505733, -1.4255, -0.0164337)
+mesh = SubResource("CylinderMesh_r81rb")
 skeleton = NodePath("../..")
 
 [node name="Cols" type="Node3D" parent="Environment/Pavillion"]
@@ -782,7 +806,7 @@ surface_material_override/0 = ExtResource("9_qdtev")
 
 [node name="Player" parent="." instance=ExtResource("2_4sucl")]
 unique_name_in_owner = true
-transform = Transform3D(0.078894, 0, -0.996883, 0, 1, 0, 0.996883, 0, 0.078894, -13.4511, 1.2663, 0)
+transform = Transform3D(0.078894, 0, -0.996883, 0, 1, 0, 0.996883, 0, 0.078894, -13.4511, 2.72417, 0)
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 
