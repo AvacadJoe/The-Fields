@@ -5,9 +5,12 @@ extends MeshInstance3D
 @export var float_time = 1
 @export var rotate_speed = 1
 @export var ghost_dialogue : DialogueResource
+@export var dialogue_title : String = "this_is_a_node_title"
 
 @onready var interact_area = $InteractArea
 @onready var interact_gizmo = $InteractIcon
+
+var track_player_speed = 2
 
 var interactable = false :
     set (value):
@@ -15,7 +18,8 @@ var interactable = false :
         interactable = value
     get:
         return interactable
-        
+
+var face_player = false
 var cur_y
 var cur_z
 var cur_x
@@ -44,7 +48,13 @@ func _body_exited(body):
 
 func _process(delta):
     self.rotate_y(rotate_speed*delta)
-    #self.look_at(%Player.global_position, Vector3.UP, true)
+    
+    if interactable:
+        var aim_vector = (%Player.position - self.position)
+        aim_vector = aim_vector.normalized()
+        var aim_vector2d = Vector2(aim_vector.x, -aim_vector.z)
+        var angle_to = aim_vector2d.angle()+PI/2-PI*1/8
+        self.rotation.y = lerp_angle(self.rotation.y, angle_to, delta*track_player_speed)
     pass
     
 func tween_up():
@@ -65,6 +75,6 @@ func tween_down():
 func _interact():
     
     if interactable:
-        %DialogueMenu.start(ghost_dialogue.duplicate(), "this_is_a_node_title")
+        %DialogueMenu.start(ghost_dialogue.duplicate(), dialogue_title)
         
     pass

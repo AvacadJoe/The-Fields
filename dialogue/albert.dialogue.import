@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bmad4v0k5wr8r"
+path="res://.godot/imported/albert.dialogue-30c91d7a12ada893b3e7113e4b82c33c.tres"
+
+[deps]
+
+source_file="res://dialogue/albert.dialogue"
+dest_files=["res://.godot/imported/albert.dialogue-30c91d7a12ada893b3e7113e4b82c33c.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,11 @@
+~ albert_dialogue
+Albert: [[Hi|Hello|Howdy]], this is some dialogue.
+Albert: Here are some choices.
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => albert_dialogue
+- End the conversation => END
+Albert: For more information see the online documentation.
+=> END

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdk6hwb4hi2wc"]
+[gd_scene load_steps=10 format=3 uid="uid://cdk6hwb4hi2wc"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_xh3bb"]
 [ext_resource type="Texture2D" uid="uid://c1l6mbc13nmqw" path="res://ui-assets/raindrop.png" id="2_gmbe0"]
+[ext_resource type="ArrayMesh" uid="uid://currsn2o71k6y" path="res://3d-assets/Balloon.obj" id="3_ea3jc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3rsb5"]
 radius = 0.3
@@ -34,7 +35,18 @@ material = SubResource("StandardMaterial3D_w4wrw")
 size = Vector2(0.04, 0.16)
 subdivide_width = 1
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q04lo"]
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.67, 0.67, 0.67, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0oiox"]
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.64, 0.64, 0.64, 1)
+
 [node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, 0, 0)
 script = ExtResource("1_xh3bb")
 
 [node name="CShape" type="CollisionShape3D" parent="."]
@@ -45,6 +57,15 @@ shape = SubResource("CapsuleShape3D_3rsb5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 fov = 80.0
 
+[node name="Flashlight" type="SpotLight3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0488105, -0.554798)
+visible = false
+light_energy = 6.0
+light_volumetric_fog_energy = 0.0
+spot_range = 20.0
+spot_attenuation = 0.1
+spot_angle = 40.0
+
 [node name="RainParticles3D" type="GPUParticles3D" parent="."]
 amount = 5000
 lifetime = 3.0
@@ -54,3 +75,10 @@ randomness = 0.5
 trail_lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_04eqq")
 draw_pass_1 = SubResource("QuadMesh_lfqnc")
+
+[node name="Balloon" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.08207, 0)
+visible = false
+mesh = ExtResource("3_ea3jc")
+surface_material_override/0 = SubResource("StandardMaterial3D_q04lo")
+surface_material_override/1 = SubResource("StandardMaterial3D_0oiox")

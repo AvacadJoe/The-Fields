@@ -6,6 +6,11 @@ class_name Player extends CharacterBody3D
 
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 1 # m
 @export_range(0.1, 3.0, 0.1, "or_greater") var camera_sens: float = 1
+@export var balloon_gravity = 5.0
+@export var balloon_jump_height = 5.0
+
+@onready var balloon_mesh = $Balloon
+@onready var flash_light = $Camera/Flashlight
 
 var jumping: bool = false
 var mouse_captured: bool = false
@@ -19,6 +24,29 @@ var walk_vel: Vector3 # Walking velocity
 var grav_vel: Vector3 # Gravity velocity 
 var jump_vel: Vector3 # Jumping velocity
 
+var balloon_active = false :
+    set (value):
+        balloon_active = value
+        balloon_mesh.visible = value
+        if value:
+            %BalloonLabel.text = "[center]Press B to deflate balloon[/center]"
+        else:
+            %BalloonLabel.text = "[center]Press B to inflate balloon[/center]"
+    get:
+        return balloon_active
+        
+var flashlight_active = false :
+    set (value):
+        flashlight_active = value
+        flash_light.visible = value
+        if value:
+            %FlashlightLabel.text = "[center]Press F to turn off flashlight[/center]"
+        else:
+            %FlashlightLabel.text = "[center]Press F to turn on flashlight[/center]"
+    get:
+        return flashlight_active
+        
+               
 var in_convo = false :
     set (value):
         in_convo = value
@@ -53,6 +81,8 @@ func _unhandled_input(event: InputEvent) -> void:
     if Input.is_action_just_pressed("jump"): jumping = true
     if Input.is_action_just_pressed("exit"): get_tree().quit()
     if Input.is_action_just_pressed("interact"): interact.emit()
+    if Input.is_action_just_pressed("balloon") and GameManager.balloon_unlocked: balloon_active = not balloon_active
+    if Input.is_action_just_pressed("flashlight") and GameManager.flashlight_unlocked: flashlight_active = not flashlight_active
 
 func _physics_process(delta: float) -> void:
     if mouse_captured: _handle_joypad_camera_rotation(delta)
@@ -90,12 +120,21 @@ func _walk(delta: float) -> Vector3:
     return walk_vel
 
 func _gravity(delta: float) -> Vector3:
-    grav_vel = Vector3.ZERO if is_on_floor() else grav_vel.move_toward(Vector3(0, velocity.y - gravity, 0), gravity * delta)
+    if balloon_active:
+        grav_vel = Vector3.ZERO if is_on_floor() else grav_vel.move_toward(Vector3(0, velocity.y - balloon_gravity, 0), balloon_gravity * delta)
+    else:
+        grav_vel = Vector3.ZERO if is_on_floor() else grav_vel.move_toward(Vector3(0, velocity.y - gravity, 0), gravity * delta)
+   
     return grav_vel
 
 func _jump(delta: float) -> Vector3:
     if jumping:
-        if is_on_floor(): jump_vel = Vector3(0, sqrt(4 * jump_height * gravity), 0)
+        if is_on_floor(): 
+            if balloon_active:
+                jump_vel = Vector3(0, sqrt(4 * balloon_jump_height * balloon_gravity), 0)
+            else:
+                jump_vel = Vector3(0, sqrt(4 * jump_height * gravity), 0)
+                
         jumping = false
         return jump_vel
     jump_vel = Vector3.ZERO if is_on_floor() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
