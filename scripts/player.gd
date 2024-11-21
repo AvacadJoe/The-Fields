@@ -81,7 +81,7 @@ func _unhandled_input(event: InputEvent) -> void:
     if Input.is_action_just_pressed("jump"): jumping = true
     if Input.is_action_just_pressed("exit"): get_tree().quit()
     if Input.is_action_just_pressed("interact"): interact.emit()
-    if Input.is_action_just_pressed("balloon") and GameManager.balloon_unlocked: balloon_active = not balloon_active
+    if Input.is_action_just_pressed("balloon") and is_on_floor() and GameManager.balloon_unlocked: balloon_active = not balloon_active
     if Input.is_action_just_pressed("flashlight") and GameManager.flashlight_unlocked: flashlight_active = not flashlight_active
 
 func _physics_process(delta: float) -> void:
