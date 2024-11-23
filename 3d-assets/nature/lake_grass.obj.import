@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmf0yrdhgyxfy"
+path="res://.godot/imported/lake_grass.obj-8b21294865e00f03ee73ea4056ca4c93.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lake_grass.obj-8b21294865e00f03ee73ea4056ca4c93.mesh"]
+
+source_file="res://3d-assets/nature/lake_grass.obj"
+dest_files=["res://.godot/imported/lake_grass.obj-8b21294865e00f03ee73ea4056ca4c93.mesh", "res://.godot/imported/lake_grass.obj-8b21294865e00f03ee73ea4056ca4c93.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
