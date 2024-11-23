@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ds2pelsmuti3j"
+path="res://.godot/imported/Inky.dialogue-75822c80b6da840a8c9546ffb257f998.tres"
+
+[deps]
+
+source_file="res://dialogue/Inky.dialogue"
+dest_files=["res://.godot/imported/Inky.dialogue-75822c80b6da840a8c9546ffb257f998.tres"]
+
+[params]
+
+defaults=true

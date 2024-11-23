@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ws23mu5i256r"
+path="res://.godot/imported/Pinky.dialogue-3bf316cbc32df0e0197068c414e64d74.tres"
+
+[deps]
+
+source_file="res://dialogue/Pinky.dialogue"
+dest_files=["res://.godot/imported/Pinky.dialogue-3bf316cbc32df0e0197068c414e64d74.tres"]
+
+[params]
+
+defaults=true

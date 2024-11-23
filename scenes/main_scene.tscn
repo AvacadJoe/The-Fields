@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=79 format=3 uid="uid://cnvynlmj5xjqq"]
 
 [ext_resource type="Script" path="res://scripts/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
@@ -22,12 +22,17 @@
 [ext_resource type="ArrayMesh" uid="uid://bjdl5n2tsimj7" path="res://3d-assets/building/col_1.obj" id="10_x0sq5"]
 [ext_resource type="ArrayMesh" uid="uid://doqx1tkjd5n38" path="res://3d-assets/building/col_3.obj" id="11_ipsos"]
 [ext_resource type="Script" path="res://scripts/ghost_path_follow.gd" id="12_08ljc"]
+[ext_resource type="ArrayMesh" uid="uid://currsn2o71k6y" path="res://3d-assets/objects/Balloon.obj" id="12_bia5g"]
 [ext_resource type="ArrayMesh" uid="uid://cjj7080r8w6k7" path="res://blender-assets/Death.obj" id="13_mtlvl"]
+[ext_resource type="Script" path="res://scripts/singletons/balloon_visible.gd" id="13_nbjbc"]
+[ext_resource type="Resource" uid="uid://c81b2rmuvfu7x" path="res://dialogue/Sue.dialogue" id="15_dxghu"]
 [ext_resource type="ArrayMesh" uid="uid://iwqcnhnlaqan" path="res://3d-assets/nature/tree_trunk.obj" id="16_px32v"]
 [ext_resource type="ArrayMesh" uid="uid://6uekc8asxq1v" path="res://3d-assets/building/PavillionTop.obj" id="19_1k4nc"]
 [ext_resource type="ArrayMesh" uid="uid://mdoe3aiepb52" path="res://3d-assets/building/col_5.obj" id="19_1ljjv"]
 [ext_resource type="ArrayMesh" uid="uid://bh418n25rhyrk" path="res://3d-assets/building/col_2.obj" id="27_vdls0"]
 [ext_resource type="ArrayMesh" uid="uid://bf5tk42srnjiv" path="res://3d-assets/building/col_4.obj" id="28_yak0c"]
+[ext_resource type="Script" path="res://scripts/singletons/balloon_label.gd" id="29_8ns2q"]
+[ext_resource type="Script" path="res://scripts/singletons/flashlight_label.gd" id="30_yoas5"]
 
 [sub_resource type="Environment" id="Environment_an6f7"]
 volumetric_fog_density = 0.8
@@ -175,6 +180,14 @@ texture_filter = 0
 disable_receive_shadows = true
 billboard_mode = 1
 billboard_keep_scale = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhn2t"]
+shading_mode = 0
+albedo_color = Color(0.58, 0.58, 0.58, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vl676"]
+shading_mode = 0
+albedo_color = Color(0.37, 0.37, 0.37, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_jj2u0"]
 _data = {
@@ -744,28 +757,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -151.008, 3.75403, -122.253)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.085, 2.95038, -20.1122)
 skeleton = NodePath("../..")
 
+[node name="Balloon" type="MeshInstance3D" parent="Environment/Characters/Blinky"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.27667, 0)
+mesh = ExtResource("12_bia5g")
+surface_material_override/0 = SubResource("StandardMaterial3D_qhn2t")
+surface_material_override/1 = SubResource("StandardMaterial3D_vl676")
+script = ExtResource("13_nbjbc")
+
 [node name="Inky" parent="Environment/Characters" instance=ExtResource("5_xu52k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.749, 2.95038, 21.7812)
 skeleton = NodePath("../..")
 
-[node name="PokeyPath" type="Path3D" parent="Environment/Characters"]
+[node name="SuePath" type="Path3D" parent="Environment/Characters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.876, 0, 71.5717)
 curve = SubResource("Curve3D_jj2u0")
 
-[node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/PokeyPath"]
-transform = Transform3D(-0.012742, -2.90234e-08, -0.999903, 1.77633e-15, 1, -2.90253e-08, 0.999904, -3.69854e-10, -0.012742, -31.3716, -3.8147e-06, 43.8749)
+[node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/SuePath"]
+transform = Transform3D(-0.0127424, -2.90234e-08, -0.999903, 1.77633e-15, 1, -2.90253e-08, 0.999904, -3.69864e-10, -0.0127424, -31.3716, -3.8147e-06, 43.8749)
 script = ExtResource("12_08ljc")
 
-[node name="Pokey" parent="Environment/Characters/PokeyPath/GhostPathFollow" instance=ExtResource("5_xu52k")]
+[node name="Sue" parent="Environment/Characters/SuePath/GhostPathFollow" instance=ExtResource("5_xu52k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.95, 0)
 skeleton = NodePath("../../../..")
+ghost_dialogue = ExtResource("15_dxghu")
 
 [node name="ClydePath" type="Path3D" parent="Environment/Characters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.01, 0, -95.9441)
 curve = SubResource("Curve3D_xa3k1")
 
 [node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/ClydePath"]
-transform = Transform3D(0.999949, 9.6607e-08, -0.00600585, 7.1052e-15, 0.999998, 1.60845e-05, 0.00600585, -1.60847e-05, 0.99995, -78.8386, 0, -0.169006)
+transform = Transform3D(0.999949, 9.6607e-08, -0.00600585, 7.10519e-15, 0.999998, 1.60845e-05, 0.00600584, -1.60847e-05, 0.99995, -78.8386, 0, -0.169006)
 script = ExtResource("12_08ljc")
 
 [node name="Clyde" parent="Environment/Characters/ClydePath/GhostPathFollow" instance=ExtResource("5_xu52k")]
@@ -777,7 +798,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.648, 0, 9.80953)
 curve = SubResource("Curve3D_qc6qw")
 
 [node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/PinkyPath"]
-transform = Transform3D(0.999939, 0, 0.00387002, 0, 0.999998, 0, -0.00387001, 0, 0.999941, -0.231812, 0, -0.345303)
+transform = Transform3D(0.999939, 0, 0.00387, 0, 0.999998, 0, -0.00386999, 0, 0.999941, -0.231812, 0, -0.345303)
 script = ExtResource("12_08ljc")
 speed = 12.0
 
@@ -2254,6 +2275,7 @@ offset_bottom = 1071.0
 theme = ExtResource("10_tyj36")
 bbcode_enabled = true
 text = "[center]Press B to inflate balloon[/center]"
+script = ExtResource("29_8ns2q")
 
 [node name="FlashlightLabel" type="RichTextLabel" parent="GameUI"]
 unique_name_in_owner = true
@@ -2264,6 +2286,7 @@ offset_bottom = 1071.0
 theme = ExtResource("10_tyj36")
 bbcode_enabled = true
 text = "[center]Press F to turn on flashlight[/center]"
+script = ExtResource("30_yoas5")
 
 [node name="DialogueMenu" type="CanvasLayer" parent="."]
 unique_name_in_owner = true

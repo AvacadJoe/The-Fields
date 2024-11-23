@@ -1,17 +1,20 @@
 extends Node
 
-
-var balloon_unlocked = true :
+var balloon_unlocked = false :
     set (value):
         balloon_unlocked = value
-        %BalloonLabel.visible = value
     get:
         return balloon_unlocked
 
-
-var flashlight_unlocked = true :
+var flashlight_unlocked = false :
     set (value):
         flashlight_unlocked = value
-        %FlashlightLabel.visible = value
     get:
         return flashlight_unlocked
+
+# Quest variables
+var ghost_hunt_started = false
+var pinky = false
+var inky  = false
+var pokey = false
+var clyde = false

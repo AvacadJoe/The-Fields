@@ -1,0 +1,7 @@
+~ pinky_dialogue
+Pinky: Wheeeeeee!
+if GameManager.ghost_hunt_started
+	You: Your friend is looking for you by the entrance to the maze.
+	Pinky: Oh yipee!!! Thank you!
+	do GameManager.pinky = true
+=> END

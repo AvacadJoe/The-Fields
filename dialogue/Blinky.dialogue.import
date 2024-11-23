@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c6gsmpg84pqbh"
+path="res://.godot/imported/Blinky.dialogue-fa1dde437405cb7e6375ecf616805704.tres"
+
+[deps]
+
+source_file="res://dialogue/Blinky.dialogue"
+dest_files=["res://.godot/imported/Blinky.dialogue-fa1dde437405cb7e6375ecf616805704.tres"]
+
+[params]
+
+defaults=true
