@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=60 format=3 uid="uid://cnvynlmj5xjqq"]
 
 [ext_resource type="Script" path="res://scripts/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
@@ -39,17 +39,38 @@ volumetric_fog_temporal_reprojection_enabled = false
 
 [sub_resource type="Curve3D" id="Curve3D_ahdwu"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 57.2507, 0.938477, -180.489, 0, 0, 0, 0, 0, 0, -135.523, 0.856738, -180.987, 0, 0, 0, 0, 0, 0, -135.548, 0.781258, -82.0375, 0, 0, 0, 0, 0, 0, -89.1027, 0.767142, -81.9088, 0, 0, 0, 0, 0, 0, -88.272, 0.754869, -46.2326, 0, 0, 0, 0, 0, 0, -135.004, 0.744919, -45.776, 0, 0, 0, 0, 0, 0, -135.021, 0.693423, -26.2425, -0.22139, 0.0397253, -5.18624, 0.22139, -0.0397253, 5.18624, -135.109, 9.21708, -20.3627, 0, 0, 0, 0, 0, 0, -134.892, 0.679141, -14.9625, 0, 0, 0, 0, 0, 0, -135.01, 0.652245, 6.30271, 0, 0, 0, 0, 0, 0, -88.4193, 0.649815, 6.33937, 0, 0, 0, 0, 0, 0, -88.169, 0.612819, 43.1218, 0, 0, 0, 0, 0, 0, -135.199, 0.609404, 43.343, 0, 0, 0, 0, 0, 0, -135.47, 0.548009, 87.6463, 0, 0, 0, 0, 0, 0, -119.497, 0.541726, 88.2822, 0, 0, 0, 0, 0, 0, -119.558, 0.528067, 111.361, 0, 0, 0, 0, 0, 0, -135.597, 0.519057, 111.01, 0, 0, 0, 0, 0, 0, -135.882, 0.454504, 157.643, 0, 0, 0, 0, 0, 0, 56.6164, -0.10095, 156.388, 0, 0, 0, 0, 0, 0, 57.2507, 0.938477, -179.283),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 57.2507, 0.938477, -180.489, 0, 0, 0, 0, 0, 0, 6.43622, 0.916931, -180.62, 0, 0, 0, 0, 0, 0, 6.07664, 0.915082, -124.632, 0, 0, 0, 0, 0, 0, -9.07474, 0.911626, -124.653, 0, 0, 0, 0, 0, 0, -9.27051, 0.910271, -180.661, 0, 0, 0, 0, 0, 0, -135.523, 0.856738, -180.987, 0, 0, 0, 0, 0, 0, -135.548, 0.781258, -82.0375, 0, 0, 0, 0, 0, 0, -88.1027, 0.767142, -81.9088, 0, 0, 0, 0, 0, 0, -88.272, 0.754869, -46.2326, 0, 0, 0, 0, 0, 0, -109.004, 0.744919, -45.776, 0, 0, 0, 0, 0, 0, -109.021, 0.693423, -26.2425, -0.22139, 0.0397253, -5.18624, 0.22139, -0.0397253, 5.18624, -109.109, 9.21708, -20.3627, 0, 0, 0, 0, 0, 0, -108.892, 0.679141, -14.9625, 0, 0, 0, 0, 0, 0, -109.01, 0.652245, 6.30271, 0, 0, 0, 0, 0, 0, -88.4193, 0.649815, 6.33937, 0, 0, 0, 0, 0, 0, -88.169, 0.612819, 43.1218, 0, 0, 0, 0, 0, 0, -135.199, 0.609404, 43.343, 0, 0, 0, 0, 0, 0, -135.47, 0.548009, 81.6463, 0, 0, 0, 0, 0, 0, -115.497, 0.541726, 81.2822, 0, 0, 0, 0, 0, 0, -115.558, 0.528067, 110.361, 0, 0, 0, 0, 0, 0, -135.597, 0.519057, 110.01, 0, 0, 0, 0, 0, 0, -135.882, 0.454504, 153.643, 0, 0, 0, 0, 0, 0, 56.6164, -0.10095, 152.388, 0, 0, 0, 0, 0, 0, 56.7356, 0.0944368, 90.0421, 0, 0, 0, 0, 0, 0, 18.7401, 0.101693, 89.7269, 0, 0, 0, 0, 0, 0, 18.768, 0.147526, 55.1019, 0, 0, 0, 0, 0, 0, 56.7806, 0.168105, 55.5353, 0, 0, 0, 0, 0, 0, 57.2507, 0.938477, -179.283),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 20
+point_count = 28
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xja32"]
 albedo_color = Color(0.285167, 0.232, 0.29, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_rfqvw"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, 5, 1, -3, 0, 0, 0, 0, 0, 0, 5, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -3, 0, 0, 0, 0, 0, 0, 5, 1, -3, 0, 0, 0, 0, 0, 0, 5, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_lovcw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, 42, 0, 0, 0, 0, 0, 0, -13, 1, 42, 0, 0, 0, 0, 0, 0, -13, 1, 19.1581, 0, 0, 0, 0, 0, 0, 24, 1, 19.3058, 0, 0, 0, 0, 0, 0, 24, 1, 6.27529, 0, 0, 0, 0, 0, 0, -13, 1, 6.50629, 0, 0, 0, 0, 0, 0, -13, 1, -17, 0, 0, 0, 0, 0, 0, -21, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[sub_resource type="Curve3D" id="Curve3D_jte15"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17, 1, -17, 0, 0, 0, 0, 0, 0, -26, 1, -17, 0, 0, 0, 0, 0, 0, -25, 1, 55, 0, 0, 0, 0, 0, 0, -13, 1, 55, 0, 0, 0, 0, 0, 0, -13, 1, 19.1581, 0, 0, 0, 0, 0, 0, 12, 1, 19.3058, 0, 0, 0, 0, 0, 0, 12, 1, 6.27528, 0, 0, 0, 0, 0, 0, -13, 1, 6.50629, 0, 0, 0, 0, 0, 0, -13, 1, -17, 0, 0, 0, 0, 0, 0, -21, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[sub_resource type="Curve3D" id="Curve3D_jyxvi"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, 24, 0, 0, 0, 0, 0, 0, 22, 1, 24, 0, 0, 0, 0, 0, 0, 22, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
 point_count = 6
@@ -61,16 +82,65 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="Curve3D" id="Curve3D_san6g"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, 24, 0, 0, 0, 0, 0, 0, 22, 1, 24, 0, 0, 0, 0, 0, 0, 22, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_mvc0f"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, 24, 0, 0, 0, 0, 0, 0, 7, 1, 24, 0, 0, 0, 0, 0, 0, 7, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_w33as"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17, 1, -17, 0, 0, 0, 0, 0, 0, -26, 1, -17, 0, 0, 0, 0, 0, 0, -25, 1, 55, 0, 0, 0, 0, 0, 0, -13, 1, 55, 0, 0, 0, 0, 0, 0, -13, 1, 19.1581, 0, 0, 0, 0, 0, 0, 30, 1, 19.3058, 0, 0, 0, 0, 0, 0, 30, 1, 6.27528, 0, 0, 0, 0, 0, 0, -13, 1, 6.50629, 0, 0, 0, 0, 0, 0, -13, 1, -17, 0, 0, 0, 0, 0, 0, -21, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[sub_resource type="Curve3D" id="Curve3D_fj1fb"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17, 1, -32, 0, 0, 0, 0, 0, 0, -26, 1, -32, 0, 0, 0, 0, 0, 0, -25, 1, 55, 0, 0, 0, 0, 0, 0, -13, 1, 55, 0, 0, 0, 0, 0, 0, -13, 1, 19.1581, 0, 0, 0, 0, 0, 0, 13, 1, 19.3058, 0, 0, 0, 0, 0, 0, 13, 1, 6.27528, 0, 0, 0, 0, 0, 0, -13, 1, 6.50629, 0, 0, 0, 0, 0, 0, -13, 1, -32, 0, 0, 0, 0, 0, 0, -21, 1, -32),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[sub_resource type="Curve3D" id="Curve3D_ku8b8"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -37, 0, 0, 0, 0, 0, 0, -64, 1, -37, 0, 0, 0, 0, 0, 0, -64, 1, 36, 0, 0, 0, 0, 0, 0, 4.99997, 1, 36, 0, 0, 0, 0, 0, 0, 5, 1, -37, 0, 0, 0, 0, 0, 0, -11, 1, -37),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
 [sub_resource type="Curve3D" id="Curve3D_t08k1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, -13.0193, 1, -4, 0, 0, 0, 0, 0, 0, -13.0412, 1, 40, 0, 0, 0, 0, 0, 0, 5, 1, 40, 0, 0, 0, 0, 0, 0, 5, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, -8.01929, 1, -4, 0, 0, 0, 0, 0, 0, -8.04117, 1, 37, 0, 0, 0, 0, 0, 0, 5, 1, 37, 0, 0, 0, 0, 0, 0, 5, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
 
+[sub_resource type="Curve3D" id="Curve3D_foa7k"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -44, 1, -17, 0, 0, 0, 0, 0, 0, -44, 1, 12, 0, 0, 0, 0, 0, 0, 4.99997, 1, 12, 0, 0, 0, 0, 0, 0, 5, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
 [sub_resource type="Curve3D" id="Curve3D_ip0iw"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, 78, 1, -4, 0, 0, 0, 0, 0, 0, 78, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, 70, 1, -4, 0, 0, 0, 0, 0, 0, 70, 1, -17, 0, 0, 0, 0, 0, 0, 37.4579, 1, -17, 0, 0, 0, 0, 0, 0, 36.9968, 1, -43, 0, 0, 0, 0, 0, 0, 19.7795, 1, -43, 0, 0, 0, 0, 0, 0, 19.6435, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[sub_resource type="Curve3D" id="Curve3D_qbowa"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -44, 1, -17, 0, 0, 0, 0, 0, 0, -44, 1, -1.00002, 0, 0, 0, 0, 0, 0, -8.00003, 1, -1, 0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
 point_count = 6
@@ -225,6 +295,7 @@ sky_mode = 1
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="maze" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 0)
 
 [node name="Boundary" type="Path3D" parent="Environment/maze"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.323, 1.91202, 23.0836)
@@ -232,7 +303,6 @@ curve = SubResource("Curve3D_ahdwu")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Boundary"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
-visible = false
 use_collision = true
 polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
 mode = 2
@@ -253,7 +323,66 @@ curve = SubResource("Curve3D_rfqvw")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
-visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block1_1" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.323, 1.91202, -67.9164)
+curve = SubResource("Curve3D_lovcw")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block1_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block1_2" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 240.323, 1.91202, -60.9164)
+curve = SubResource("Curve3D_jte15")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block1_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block1_3" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 274.323, 1.91202, -41.9164)
+curve = SubResource("Curve3D_jyxvi")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block1_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
 use_collision = true
 polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
 mode = 2
@@ -274,7 +403,46 @@ curve = SubResource("Curve3D_dwr1a")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
-visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block2_1" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183.323, 1.91202, -125.916)
+curve = SubResource("Curve3D_san6g")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block2_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block2_2" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.323, 1.91202, -127.916)
+curve = SubResource("Curve3D_mvc0f")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block2_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
 use_collision = true
 polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
 mode = 2
@@ -290,10 +458,70 @@ path_joined = false
 material = SubResource("StandardMaterial3D_xja32")
 
 [node name="Block3" type="Path3D" parent="Environment/maze"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, 96.0836)
-curve = SubResource("Curve3D_t08k1")
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 172.323, 1.91202, 37.0836)
+curve = SubResource("Curve3D_rfqvw")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block3_1" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 240.323, 1.91202, 78.0836)
+curve = SubResource("Curve3D_w33as")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block3_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block3_2" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 240.323, 1.91202, 150.084)
+curve = SubResource("Curve3D_fj1fb")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block3_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="BlockMid" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 193.323, 1.91202, 1.0836)
+curve = SubResource("Curve3D_ku8b8")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/BlockMid"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
 visible = false
 use_collision = true
@@ -311,12 +539,71 @@ path_joined = false
 material = SubResource("StandardMaterial3D_xja32")
 
 [node name="Block4" type="Path3D" parent="Environment/maze"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, 170.084)
-curve = SubResource("Curve3D_ip0iw")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, 96.0836)
+curve = SubResource("Curve3D_t08k1")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
-visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block4_1" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 160.323, 1.91202, 91.0836)
+curve = SubResource("Curve3D_foa7k")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block4_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block5" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, 168.084)
+curve = SubResource("Curve3D_ip0iw")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block5_1" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 241.323, 1.91202, 148.084)
+curve = SubResource("Curve3D_qbowa")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block5_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
 use_collision = true
 polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
 mode = 2
