@@ -24,8 +24,14 @@ func _ready():
     pass
 
 func _process(delta):
-    var player_dist_from_center = (global_center-%Player.global_position).length()   
-   
+    var player_dist_from_center_x = absf(global_center.x-%Player.global_position.x)
+    var player_dist_from_center_z = absf(global_center.z-%Player.global_position.z)
+    var player_dist_from_center = player_dist_from_center_z
+    
+    # Take the larger dist and pass it to next function
+    if player_dist_from_center_x > player_dist_from_center_z:
+        player_dist_from_center = player_dist_from_center_x
+    
     # Start the fog / darkening effect outside of game_area_radius
     if (player_dist_from_center > game_area_radius + fog_width and not resetting_player):
         #Tween the light down, and then teleport the player to the game center, then tween light back up

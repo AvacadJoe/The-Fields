@@ -1,11 +1,16 @@
 ~ albert_dialogue
-Albert: [[Hi|Hello|Howdy]], this is some dialogue.
-Albert: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => albert_dialogue
-- End the conversation => END
-Albert: For more information see the online documentation.
+Albert: [[Hi|Hello|Howdy]]!
+~ convo_loop
+- Where can I go around here?
+	You: Where can I go around here?
+	Albert: Hmmm, well you can go anywhere I suppose!
+	Albert: And if you're asking where should you go: well you should go anywhere you want!
+- Seen anything interesting lately?
+	You: Seen anything interesting lately?
+	Albert: Well actually now that you mention it yes!
+	Albert: While I was off in those woods over there I saw a group of ghosts floating around some tree stumps.
+	You: Thanks!
+- Leave
+	Albert: Goodbye! => END
+=> convo_loop
 => END

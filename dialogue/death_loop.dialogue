@@ -22,7 +22,8 @@
 - How long have I been here?
 	You: How long have I been here?
 	???: I'm not sure how long any of us have been here.  It all... blurs together after a while.
-- End the conversation => END
+- Leave
+	???: Come talk to me again if you have any trouble finding the other spirits.
+	???: I'll be seeing you. => END
 => convo_loop
-???: I'll be seeing you around.
 => END
