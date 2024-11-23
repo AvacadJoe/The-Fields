@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=50 format=3 uid="uid://cnvynlmj5xjqq"]
 
 [ext_resource type="Script" path="res://scripts/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
@@ -37,6 +37,44 @@ volumetric_fog_temporal_reprojection_enabled = false
 
 [sub_resource type="Compositor" id="Compositor_5md3v"]
 
+[sub_resource type="Curve3D" id="Curve3D_ahdwu"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 57.2507, 0.938477, -180.489, 0, 0, 0, 0, 0, 0, -135.523, 0.856738, -180.987, 0, 0, 0, 0, 0, 0, -135.548, 0.781258, -82.0375, 0, 0, 0, 0, 0, 0, -89.1027, 0.767142, -81.9088, 0, 0, 0, 0, 0, 0, -88.272, 0.754869, -46.2326, 0, 0, 0, 0, 0, 0, -135.004, 0.744919, -45.776, 0, 0, 0, 0, 0, 0, -135.021, 0.693423, -26.2425, -0.22139, 0.0397253, -5.18624, 0.22139, -0.0397253, 5.18624, -135.109, 9.21708, -20.3627, 0, 0, 0, 0, 0, 0, -134.892, 0.679141, -14.9625, 0, 0, 0, 0, 0, 0, -135.01, 0.652245, 6.30271, 0, 0, 0, 0, 0, 0, -88.4193, 0.649815, 6.33937, 0, 0, 0, 0, 0, 0, -88.169, 0.612819, 43.1218, 0, 0, 0, 0, 0, 0, -135.199, 0.609404, 43.343, 0, 0, 0, 0, 0, 0, -135.47, 0.548009, 87.6463, 0, 0, 0, 0, 0, 0, -119.497, 0.541726, 88.2822, 0, 0, 0, 0, 0, 0, -119.558, 0.528067, 111.361, 0, 0, 0, 0, 0, 0, -135.597, 0.519057, 111.01, 0, 0, 0, 0, 0, 0, -135.882, 0.454504, 157.643, 0, 0, 0, 0, 0, 0, 56.6164, -0.10095, 156.388, 0, 0, 0, 0, 0, 0, 57.2507, 0.938477, -179.283),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 20
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xja32"]
+albedo_color = Color(0.285167, 0.232, 0.29, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_rfqvw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, 5, 1, -3, 0, 0, 0, 0, 0, 0, 5, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_dwr1a"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, 24, 0, 0, 0, 0, 0, 0, 4, 1, 24, 0, 0, 0, 0, 0, 0, 4, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_t08k1"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, -13.0193, 1, -4, 0, 0, 0, 0, 0, 0, -13.0412, 1, 40, 0, 0, 0, 0, 0, 0, 5, 1, 40, 0, 0, 0, 0, 0, 0, 5, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 8
+
+[sub_resource type="Curve3D" id="Curve3D_ip0iw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -17, 0, 0, 0, 0, 0, 0, -28, 1, -4, 0, 0, 0, 0, 0, 0, 78, 1, -4, 0, 0, 0, 0, 0, 0, 78, 1, -17, 0, 0, 0, 0, 0, 0, -11, 1, -17),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_d1vnp"]
 radius = 10.1637
 
@@ -51,16 +89,6 @@ texture_filter = 0
 disable_receive_shadows = true
 billboard_mode = 1
 billboard_keep_scale = true
-
-[sub_resource type="Curve3D" id="Curve3D_ahdwu"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 17.8461, 0.938477, -51.5275, 0, 0, 0, 0, 0, 0, -25.0098, 0.856738, -52.0249, 0, 0, 0, 0, 0, 0, -25.0634, 0.693423, -26.2425, -0.22139, 0.0397253, -5.18624, 0.22139, -0.0397253, 5.18624, -25.1518, 9.21708, -20.3627, 0, 0, 0, 0, 0, 0, -24.9346, 0.679141, -14.9625, 0, 0, 0, 0, 0, 0, -25.9243, 0.454504, 12.6408, 0, 0, 0, 0, 0, 0, 17.2118, -0.10095, 11.3865, 0, 0, 0, 0, 0, 0, 17.8461, 0.938477, -51.5275),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 8
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xja32"]
-albedo_color = Color(0.285167, 0.232, 0.29, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6jixy"]
 size = Vector3(600, 100, 1)
@@ -195,6 +223,113 @@ directional_shadow_blend_splits = true
 sky_mode = 1
 
 [node name="Environment" type="Node3D" parent="."]
+
+[node name="maze" type="Node3D" parent="Environment"]
+
+[node name="Boundary" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.323, 1.91202, 23.0836)
+curve = SubResource("Curve3D_ahdwu")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Boundary"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block1" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, -67.9164)
+curve = SubResource("Curve3D_rfqvw")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block2" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, -125.916)
+curve = SubResource("Curve3D_dwr1a")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block3" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, 96.0836)
+curve = SubResource("Curve3D_t08k1")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
+
+[node name="Block4" type="Path3D" parent="Environment/maze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.323, 1.91202, 170.084)
+curve = SubResource("Curve3D_ip0iw")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/maze/Block4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226913, -2.88084, -0.0454159)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-1.4382, 0.0249214, -0.77124, 12.448, 3.35757, 12.394, 3.18913, 0.112129)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_xja32")
 
 [node name="Characters" type="Node3D" parent="Environment"]
 
@@ -592,26 +727,6 @@ skeleton = NodePath("../../..")
 [node name="GrassPlane9" parent="Environment/Grass/GrassMulti9" instance=ExtResource("1_o54bj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 100)
 skeleton = NodePath("../../..")
-
-[node name="ForestPath" type="Path3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.323, -1.31802, 23.0836)
-curve = SubResource("Curve3D_ahdwu")
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/ForestPath"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.295058, 0)
-use_collision = true
-polygon = PackedVector2Array(-1.4382, 0.0249214, -0.58535, 6.14666, 0.418139, 6.147, 1.09878, 0.0414404)
-mode = 2
-path_node = NodePath("..")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_local = true
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-material = SubResource("StandardMaterial3D_xja32")
 
 [node name="Boundry" type="Node3D" parent="Environment"]
 
