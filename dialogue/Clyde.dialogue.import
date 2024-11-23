@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://by1xnjx2aq23r"
+path="res://.godot/imported/Clyde.dialogue-78779cf366c686edfc2c9fd0ce89ec5b.tres"
+
+[deps]
+
+source_file="res://dialogue/Clyde.dialogue"
+dest_files=["res://.godot/imported/Clyde.dialogue-78779cf366c686edfc2c9fd0ce89ec5b.tres"]
+
+[params]
+
+defaults=true

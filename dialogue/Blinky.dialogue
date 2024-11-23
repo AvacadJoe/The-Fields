@@ -1,7 +1,7 @@
 ~ blinky_dialogue
 if GameManager.balloon_unlocked
 	Blinky: I hope you're enjoying the balloon! I'm so glad my friends are coming to visit now!
-else if GameManager.pinky and GameManager.pokey and GameManager.clyde and GameManager.inky
+else if GameManager.pinky and GameManager.sue and GameManager.clyde and GameManager.inky
 	Blinky: You found all of them! I'm so grateful, here take this balloon you earned it!
 	do GameManager.balloon_unlocked = true
 else

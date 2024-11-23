@@ -16,5 +16,5 @@ var flashlight_unlocked = false :
 var ghost_hunt_started = false
 var pinky = false
 var inky  = false
-var pokey = false
+var sue = false
 var clyde = false

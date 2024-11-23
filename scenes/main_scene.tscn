@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=83 format=3 uid="uid://cnvynlmj5xjqq"]
 
 [ext_resource type="Script" path="res://scripts/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
@@ -23,10 +23,14 @@
 [ext_resource type="ArrayMesh" uid="uid://doqx1tkjd5n38" path="res://3d-assets/building/col_3.obj" id="11_ipsos"]
 [ext_resource type="Script" path="res://scripts/ghost_path_follow.gd" id="12_08ljc"]
 [ext_resource type="ArrayMesh" uid="uid://currsn2o71k6y" path="res://3d-assets/objects/Balloon.obj" id="12_bia5g"]
+[ext_resource type="Resource" uid="uid://c6gsmpg84pqbh" path="res://dialogue/Blinky.dialogue" id="12_dooa5"]
 [ext_resource type="ArrayMesh" uid="uid://cjj7080r8w6k7" path="res://blender-assets/Death.obj" id="13_mtlvl"]
 [ext_resource type="Script" path="res://scripts/singletons/balloon_visible.gd" id="13_nbjbc"]
 [ext_resource type="Resource" uid="uid://c81b2rmuvfu7x" path="res://dialogue/Sue.dialogue" id="15_dxghu"]
+[ext_resource type="Resource" uid="uid://ds2pelsmuti3j" path="res://dialogue/Inky.dialogue" id="15_xtatw"]
 [ext_resource type="ArrayMesh" uid="uid://iwqcnhnlaqan" path="res://3d-assets/nature/tree_trunk.obj" id="16_px32v"]
+[ext_resource type="Resource" uid="uid://by1xnjx2aq23r" path="res://dialogue/Clyde.dialogue" id="18_1567c"]
+[ext_resource type="Resource" uid="uid://ws23mu5i256r" path="res://dialogue/Pinky.dialogue" id="19_1ftst"]
 [ext_resource type="ArrayMesh" uid="uid://6uekc8asxq1v" path="res://3d-assets/building/PavillionTop.obj" id="19_1k4nc"]
 [ext_resource type="ArrayMesh" uid="uid://mdoe3aiepb52" path="res://3d-assets/building/col_5.obj" id="19_1ljjv"]
 [ext_resource type="ArrayMesh" uid="uid://bh418n25rhyrk" path="res://3d-assets/building/col_2.obj" id="27_vdls0"]
@@ -756,6 +760,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -151.008, 3.75403, -122.253)
 [node name="Blinky" parent="Environment/Characters" instance=ExtResource("5_xu52k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.085, 2.95038, -20.1122)
 skeleton = NodePath("../..")
+ghost_dialogue = ExtResource("12_dooa5")
+dialogue_title = "blinky_dialogue"
 
 [node name="Balloon" type="MeshInstance3D" parent="Environment/Characters/Blinky"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.27667, 0)
@@ -767,6 +773,8 @@ script = ExtResource("13_nbjbc")
 [node name="Inky" parent="Environment/Characters" instance=ExtResource("5_xu52k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.749, 2.95038, 21.7812)
 skeleton = NodePath("../..")
+ghost_dialogue = ExtResource("15_xtatw")
+dialogue_title = "inky_dialogue"
 
 [node name="SuePath" type="Path3D" parent="Environment/Characters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.876, 0, 71.5717)
@@ -780,31 +788,36 @@ script = ExtResource("12_08ljc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.95, 0)
 skeleton = NodePath("../../../..")
 ghost_dialogue = ExtResource("15_dxghu")
+dialogue_title = "sue_dialogue"
 
 [node name="ClydePath" type="Path3D" parent="Environment/Characters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.01, 0, -95.9441)
 curve = SubResource("Curve3D_xa3k1")
 
 [node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/ClydePath"]
-transform = Transform3D(0.999949, 9.6607e-08, -0.00600585, 7.10519e-15, 0.999998, 1.60845e-05, 0.00600584, -1.60847e-05, 0.99995, -78.8386, 0, -0.169006)
+transform = Transform3D(0.999948, 9.6607e-08, -0.00600585, 7.10519e-15, 0.999998, 1.60845e-05, 0.00600584, -1.60847e-05, 0.999949, -78.8386, 0, -0.169006)
 script = ExtResource("12_08ljc")
 
 [node name="Clyde" parent="Environment/Characters/ClydePath/GhostPathFollow" instance=ExtResource("5_xu52k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.95, 0)
 skeleton = NodePath("../../../..")
+ghost_dialogue = ExtResource("18_1567c")
+dialogue_title = "clyde_dialogue"
 
 [node name="PinkyPath" type="Path3D" parent="Environment/Characters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.648, 0, 9.80953)
 curve = SubResource("Curve3D_qc6qw")
 
 [node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/PinkyPath"]
-transform = Transform3D(0.999939, 0, 0.00387, 0, 0.999998, 0, -0.00386999, 0, 0.999941, -0.231812, 0, -0.345303)
+transform = Transform3D(0.999938, 0, 0.00387, 0, 0.999998, 0, -0.00386999, 0, 0.99994, -0.231812, 0, -0.345303)
 script = ExtResource("12_08ljc")
 speed = 12.0
 
 [node name="Pinky" parent="Environment/Characters/PinkyPath/GhostPathFollow" instance=ExtResource("5_xu52k")]
 transform = Transform3D(1, 0, -4.65661e-10, 1.42109e-14, 1, 0, 0, 0, 1, 0, 2.95, 0)
 skeleton = NodePath("../../../..")
+ghost_dialogue = ExtResource("19_1ftst")
+dialogue_title = "pinky_dialogue"
 
 [node name="Grass" type="Node3D" parent="Environment"]
 metadata/_edit_lock_ = true

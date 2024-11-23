@@ -1,9 +1,7 @@
-~ blinky_dialogue
-if GameManager.balloon_unlocked
-	Blinky: I hope you're enjoying the balloon! I'm so glad my friends are coming to visit now!
-else if GameManager.pinky and GameManager.pokey and GameManager.clyde and GameManager.inky
-	Blinky: You found all of them! I'm so grateful, here take this balloon you earned it!
-	do GameManager.balloon_unlocked = true
-else
-	Blinky: I miss my friends, I think they've all got lost in this labyrinth. If you see them, please ask them to come find me.
+~ sue_dialogue
+Sue: Hi there!
+if GameManager.ghost_hunt_started and GameManger.sue == false
+	You: Your friend is looking for you by the entrance to the maze.
+	Sue: Awww thanks!
+	do GameManager.sue = true
 => END
