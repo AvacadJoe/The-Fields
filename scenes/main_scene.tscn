@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://cnvynlmj5xjqq"]
+[gd_scene load_steps=72 format=3 uid="uid://cnvynlmj5xjqq"]
 
 [ext_resource type="Script" path="res://scripts/world_environment.gd" id="1_a3uyp"]
 [ext_resource type="PackedScene" uid="uid://f0y3nhlfsru0" path="res://scenes/GrassPlane.tscn" id="1_o54bj"]
@@ -25,6 +25,9 @@
 [ext_resource type="ArrayMesh" uid="uid://cjj7080r8w6k7" path="res://blender-assets/Death.obj" id="13_mtlvl"]
 [ext_resource type="ArrayMesh" uid="uid://iwqcnhnlaqan" path="res://3d-assets/nature/tree_trunk.obj" id="16_px32v"]
 [ext_resource type="ArrayMesh" uid="uid://6uekc8asxq1v" path="res://3d-assets/building/PavillionTop.obj" id="19_1k4nc"]
+[ext_resource type="ArrayMesh" uid="uid://mdoe3aiepb52" path="res://3d-assets/building/col_5.obj" id="19_1ljjv"]
+[ext_resource type="ArrayMesh" uid="uid://bh418n25rhyrk" path="res://3d-assets/building/col_2.obj" id="27_vdls0"]
+[ext_resource type="ArrayMesh" uid="uid://bf5tk42srnjiv" path="res://3d-assets/building/col_4.obj" id="28_yak0c"]
 
 [sub_resource type="Environment" id="Environment_an6f7"]
 volumetric_fog_density = 0.8
@@ -175,7 +178,7 @@ billboard_keep_scale = true
 
 [sub_resource type="Curve3D" id="Curve3D_jj2u0"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.3716, -3.8147e-06, 43.8749, 0, 0, 0, 0, 0, 0, 100.467, 1.23216e-08, 43.8948, 0, 0, 0, 0, 0, 0, 100.149, 1.66599e-08, 71.6195, 0, 0, 0, 0, 0, 0, 62.6262, 7.17184e-08, 71.5713, 0, 0, 0, 0, 0, 0, 62.7214, 7.39446e-08, 99.0325, 0, 0, 0, 0, 0, 0, 33.7895, 7.64011e-08, 99.0344, 0, 0, 0, 0, 0, 0, 33.5962, 1.00905e-07, 74.4878, 0, 0, 0, 0, 0, 0, 0.426453, 1.01878e-07, 73.6311, 0, 0, 0, 0, 0, 0, -0.151932, 0.00542843, 45.0028, 0, 0, 0, 0, 0, 0, 35.7209, 0.00534071, 44.0693, 0, 0, 0, 0, 0, 0, 33.8067, 4.08737e-06, 1.58416, 0, 0, 0, 0, 0, 0, -31.7885, 3.8147e-06, 0.167, 0, 0, 0, 0, 0, 0, -31.4337, 0, 43.8638),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.3716, -3.8147e-06, 43.8749, 0, 0, 0, 0, 0, 0, 100.467, 1.23216e-08, 45.555, 0, 0, 0, 0, 0, 0, 100.149, 1.66599e-08, 71.6195, 0, 0, 0, 0, 0, 0, 62.6262, 7.17184e-08, 71.5713, 0, 0, 0, 0, 0, 0, 62.7214, 7.39446e-08, 99.0325, 0, 0, 0, 0, 0, 0, 33.7895, 7.64011e-08, 99.0344, 0, 0, 0, 0, 0, 0, 33.5962, 1.00905e-07, 74.4878, 0, 0, 0, 0, 0, 0, 0.426453, 1.01878e-07, 73.6311, 0, 0, 0, 0, 0, 0, -0.151932, 0.00542843, 45.0028, 0, 0, 0, 0, 0, 0, 34.1545, 0.00534071, 44.0693, 0, 0, 0, 0, 0, 0, 33.8067, 4.08737e-06, 1.58416, 0, 0, 0, 0, 0, 0, -31.7885, 3.8147e-06, 0.167, 0, 0, 0, 0, 0, 0, -31.4337, 0, 43.8638),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 13
@@ -183,6 +186,13 @@ point_count = 13
 [sub_resource type="Curve3D" id="Curve3D_xa3k1"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, -78.8386, 0, -0.169006, 0, 0, 0, 0, 0, 0, -78.5023, -0.000900667, -56.1622, 0, 0, 0, 0, 0, 0, 34.87, -0.0186157, -56.1135, 0, 0, 0, 0, 0, 0, 34.0569, 0, -0.00868225, 0, 0, 0, 0, 0, 0, 98.6919, 0, 0, 0, 0, 0, 0, 0, 0, -78.7793, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_qc6qw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.231812, 0, -0.345303, 0, 0, 0, 0, 0, 0, -0.413757, 0, -47.3567, 0, 0, 0, 0, 0, 0, -76.5699, 0, -47.2032, 0, 0, 0, 0, 0, 0, -76.4956, 0, 29.5658, 0, 0, 0, 0, 0, 0, 0, 0, 29.9437, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
 point_count = 6
@@ -222,6 +232,14 @@ radius = 2.369
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_syx86"]
 height = 8.2654
 radius = 2.275
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6e2oa"]
+height = 9.591
+radius = 2.369
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hthia"]
+height = 9.388
+radius = 2.369
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fxqrc"]
 shader = ExtResource("3_j4x27")
@@ -735,11 +753,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.876, 0, 71.5717)
 curve = SubResource("Curve3D_jj2u0")
 
 [node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/PokeyPath"]
-transform = Transform3D(-0.00015096, -2.90281e-08, -0.999984, -8.88165e-16, 1, -2.90276e-08, 0.999985, -4.38127e-12, -0.00015096, -31.3716, -3.8147e-06, 43.8749)
+transform = Transform3D(-0.012742, -2.90234e-08, -0.999903, 1.77633e-15, 1, -2.90253e-08, 0.999904, -3.69854e-10, -0.012742, -31.3716, -3.8147e-06, 43.8749)
 script = ExtResource("12_08ljc")
 
 [node name="Pokey" parent="Environment/Characters/PokeyPath/GhostPathFollow" instance=ExtResource("5_xu52k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.606567, 2.95039, 0.868607)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.95, 0)
 skeleton = NodePath("../../../..")
 
 [node name="ClydePath" type="Path3D" parent="Environment/Characters"]
@@ -747,11 +765,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.01, 0, -95.9441)
 curve = SubResource("Curve3D_xa3k1")
 
 [node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/ClydePath"]
-transform = Transform3D(0.999952, 9.65961e-08, -0.00600519, 3.55261e-15, 0.999998, 1.60845e-05, 0.00600518, -1.60847e-05, 0.999953, -78.8386, 0, -0.169006)
+transform = Transform3D(0.999949, 9.6607e-08, -0.00600585, 7.1052e-15, 0.999998, 1.60845e-05, 0.00600585, -1.60847e-05, 0.99995, -78.8386, 0, -0.169006)
 script = ExtResource("12_08ljc")
 
 [node name="Clyde" parent="Environment/Characters/ClydePath/GhostPathFollow" instance=ExtResource("5_xu52k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.606567, 2.95039, 0.868607)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.95, 0)
+skeleton = NodePath("../../../..")
+
+[node name="PinkyPath" type="Path3D" parent="Environment/Characters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.648, 0, 9.80953)
+curve = SubResource("Curve3D_qc6qw")
+
+[node name="GhostPathFollow" type="PathFollow3D" parent="Environment/Characters/PinkyPath"]
+transform = Transform3D(0.999939, 0, 0.00387002, 0, 0.999998, 0, -0.00387001, 0, 0.999941, -0.231812, 0, -0.345303)
+script = ExtResource("12_08ljc")
+speed = 12.0
+
+[node name="Pinky" parent="Environment/Characters/PinkyPath/GhostPathFollow" instance=ExtResource("5_xu52k")]
+transform = Transform3D(1, 0, -4.65661e-10, 1.42109e-14, 1, 0, 0, 0, 1, 0, 2.95, 0)
 skeleton = NodePath("../../../..")
 
 [node name="Grass" type="Node3D" parent="Environment"]
@@ -1297,26 +1328,8 @@ transform = Transform3D(-0.219672, 0, -0.44916, 0, 0.5, 0, 0.44916, 0, -0.219672
 [node name="tree__Imported63" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
 transform = Transform3D(-0.439344, 0, -0.898319, 0, 1, 0, 0.898319, 0, -0.439344, -6.48149, -3.83923, -181.366)
 
-[node name="tree__Imported64" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
-transform = Transform3D(-0.187879, 0, -0.674316, 0, 0.7, 0, 0.674316, 0, -0.187879, -14.8881, -2.05881, -211.839)
-
 [node name="tree__Imported65" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
 transform = Transform3D(-1.89783, 0, -0.631066, 0, 2, 0, 0.631066, 0, -1.89783, -29.1543, -2.45528, -169.58)
-
-[node name="tree__Imported66" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
-transform = Transform3D(-0.993085, 0, 0.117399, 0, 1, 0, -0.117399, 0, -0.993085, 18.0154, -1.73781, -229.651)
-
-[node name="tree__Imported67" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
-transform = Transform3D(-1.23872, 0, -0.652358, 0, 1.4, 0, 0.652358, 0, -1.23872, -12.1904, -2.05884, -244.957)
-
-[node name="tree__Imported68" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
-transform = Transform3D(-0.877699, 0, -0.46223, 0, 0.991973, 0, 0.46223, 0, -0.877699, -0.429771, -3.83926, -222.15)
-
-[node name="tree__Imported69" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
-transform = Transform3D(-0.549601, 0, -0.433519, 0, 0.7, 0, 0.433519, 0, -0.549601, 10.7659, -2.05884, -251.712)
-
-[node name="tree__Imported70" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
-transform = Transform3D(-0.952279, 0, 0.305231, 0, 1, 0, -0.305231, 0, -0.952279, -25.6892, -2.45531, -226.014)
 
 [node name="tree__Imported71" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
 transform = Transform3D(0.999832, 0, 0.0183077, 0, 1, 0, -0.0183077, 0, 0.999832, 13.0371, -1.73778, -183.484)
@@ -1837,9 +1850,6 @@ transform = Transform3D(-0.219672, 0, -0.44916, 0, 0.5, 0, 0.44916, 0, -0.219672
 [node name="tree__Imported248" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
 transform = Transform3D(-0.219672, 0, -0.44916, 0, 0.5, 0, 0.44916, 0, -0.219672, -71.8078, -2.05881, -117.361)
 
-[node name="tree__Imported249" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
-transform = Transform3D(-0.219672, 0, -0.44916, 0, 0.5, 0, 0.44916, 0, -0.219672, 20.9469, -2.05881, -212.053)
-
 [node name="tree__Imported250" parent="Environment/Forest" instance=ExtResource("7_je5ba")]
 transform = Transform3D(-0.219672, 0, -0.44916, 0, 0.5, 0, 0.44916, 0, -0.219672, 16.6607, -2.05881, -123.084)
 
@@ -2091,6 +2101,110 @@ skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Grove/TreeTrunk6/StaticBody3D"]
 shape = SubResource("CylinderShape3D_syx86")
+
+[node name="Ruins" type="Node3D" parent="Environment"]
+
+[node name="Col2" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1164, 2.28372, -244.482)
+mesh = ExtResource("10_x0sq5")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col2/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col3" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.536824, 2.28372, -244.482)
+mesh = ExtResource("10_x0sq5")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col3/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col5" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4369, 2.28372, -221.717)
+mesh = ExtResource("10_x0sq5")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col5/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col7" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.536824, 2.28372, -221.717)
+mesh = ExtResource("10_x0sq5")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col7/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col9" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3237, 2.28372, -244.482)
+mesh = ExtResource("10_x0sq5")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col9/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col10" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3237, 2.28372, -221.717)
+mesh = ExtResource("10_x0sq5")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col10/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col4" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7385, 2.23996, -221.519)
+mesh = ExtResource("11_ipsos")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col4/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col6" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2181, 2.19292, -244.487)
+mesh = ExtResource("19_1ljjv")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col6/StaticBody3D"]
+shape = SubResource("CylinderShape3D_woyaf")
+
+[node name="Col8" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(0.192357, -0.836585, -0.512957, 0.97457, 0.224084, 0, 0.114945, -0.499913, 0.858414, 13.785, 0, -223.784)
+mesh = ExtResource("27_vdls0")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col8/StaticBody3D"]
+transform = Transform3D(1, 3.72529e-09, 7.45058e-09, -7.45058e-09, 1, 0, 0, 2.98023e-08, 1, -0.974737, 7.29667, 0.121704)
+shape = SubResource("CylinderShape3D_6e2oa")
+
+[node name="Col11" type="MeshInstance3D" parent="Environment/Ruins"]
+transform = Transform3D(0.661166, -0.749743, -0.0272952, 0.0266823, 0.0598579, -0.99785, 0.749765, 0.659017, 0.0595809, -17.1333, 0.850135, -246.6)
+mesh = ExtResource("28_yak0c")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ruins/Col11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ruins/Col11/StaticBody3D"]
+transform = Transform3D(1, 0, -7.45058e-09, 0, 1, 0, 0, 7.45058e-09, 1, -0.266174, 4.87308, 0.2852)
+shape = SubResource("CylinderShape3D_hthia")
 
 [node name="Player" parent="." instance=ExtResource("2_4sucl")]
 unique_name_in_owner = true

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_xh3bb"]
 [ext_resource type="Texture2D" uid="uid://c1l6mbc13nmqw" path="res://ui-assets/raindrop.png" id="2_gmbe0"]
-[ext_resource type="ArrayMesh" uid="uid://currsn2o71k6y" path="res://3d-assets/Balloon.obj" id="3_ea3jc"]
+[ext_resource type="ArrayMesh" uid="uid://currsn2o71k6y" path="res://3d-assets/objects/Balloon.obj" id="3_ea3jc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3rsb5"]
 radius = 0.3
