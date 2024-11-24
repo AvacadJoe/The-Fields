@@ -1,5 +1,7 @@
 extends Node
 
+enum Items {DEFAULT, FLASHLIGHT, BALLOON}
+
 var balloon_unlocked = false :
     set (value):
         balloon_unlocked = value
