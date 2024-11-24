@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://l7rddsiuvpo7"]
+[gd_scene load_steps=7 format=3 uid="uid://l7rddsiuvpo7"]
 
-[ext_resource type="ArrayMesh" uid="uid://bjdl5n2tsimj7" path="res://3d-assets/building/col_1.obj" id="1_1ujrs"]
+[ext_resource type="Script" path="res://scripts/item_viewer.gd" id="1_m7cgo"]
+[ext_resource type="ArrayMesh" uid="uid://dnv67yym12t7e" path="res://3d-assets/objects/flashlight.tres" id="1_ucyb5"]
 [ext_resource type="Script" path="res://scripts/singletons/rotate_mesh.gd" id="2_a53g1"]
+[ext_resource type="Material" uid="uid://b080bqfeqvnc5" path="res://shaders/viewport.tres" id="2_sy172"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wybik"]
 disable_receive_shadows = true
@@ -11,10 +13,17 @@ background_mode = 1
 background_energy_multiplier = 16.0
 
 [node name="SubviewportScene" type="Node3D"]
+script = ExtResource("1_m7cgo")
+
+[node name="QuantDitherShader" type="ColorRect" parent="."]
+material = ExtResource("2_sy172")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.526672, -2.04098)
-mesh = ExtResource("1_1ujrs")
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.382, -4.181)
+mesh = ExtResource("1_ucyb5")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_wybik")
 script = ExtResource("2_a53g1")

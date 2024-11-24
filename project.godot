@@ -94,7 +94,7 @@ flashlight={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test_dialogue.dialogue", "res://dialogue/death_intro.dialogue", "res://dialogue/death_loop.dialogue", "res://dialogue/albert.dialogue", "res://dialogue/Blinky.dialogue", "res://dialogue/Inky.dialogue", "res://dialogue/Pinky.dialogue", "res://dialogue/Sue.dialogue", "res://dialogue/Clyde.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/test_dialogue.dialogue", "res://dialogue/death_intro.dialogue", "res://dialogue/death_loop.dialogue", "res://dialogue/albert.dialogue", "res://dialogue/Blinky.dialogue", "res://dialogue/Inky.dialogue", "res://dialogue/Pinky.dialogue", "res://dialogue/Sue.dialogue", "res://dialogue/Clyde.dialogue", "res://dialogue/item_dialogue/flashlight.dialogue", "res://dialogue/item_dialogue/pencil.dialogue")
 
 [rendering]
 

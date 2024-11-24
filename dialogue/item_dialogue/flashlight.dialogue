@@ -1,0 +1,10 @@
+~ flashlight_dialogue
+You: This flashlight brings back memories of camping in the woods.
+You: Sitting around a campfire with my friends, sharing stories while the stars twinkled overhead.
+You: I loved that feeling of being together with all of them.  I was so sad when they all moved away.
+You: But I remember we all came back to those woods together, every year.  Those times kept me going through the rest of it all.
+do GameManager.hide_labels = false
+do GameManager.increment_clues()
+do GameManager.hide_item_viewer = true
+do GameManager.flashlight_unlocked = true
+=> END

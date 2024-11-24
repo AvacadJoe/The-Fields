@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b080bqfeqvnc5"]
+
+[ext_resource type="Shader" path="res://shaders/dither.gdshader" id="1_nf0t6"]
+[ext_resource type="Texture2D" uid="uid://ckjifeok1wrto" path="res://shaders/2bit-demichrome-1x.png" id="2_vtjty"]
+
+[resource]
+shader = ExtResource("1_nf0t6")
+shader_parameter/quantize_size = 2.0
+shader_parameter/handle_scale = null
+shader_parameter/handle_subpixels = true
+shader_parameter/dither_enabled = true
+shader_parameter/bayer_pattern = 2.0
+shader_parameter/divisions = 1.0
+shader_parameter/contrast = 1.0
+shader_parameter/shift = 0.0
+shader_parameter/grayscale = false
+shader_parameter/use_palette = true
+shader_parameter/palette = ExtResource("2_vtjty")
