@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dk8gw1hmlh2go"
+path="res://.godot/imported/lake_sides.obj-615a328f6a1d2e74a8d93bc2b856dc4a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lake_sides.obj-615a328f6a1d2e74a8d93bc2b856dc4a.mesh"]
+
+source_file="res://3d-assets/nature/lake_sides.obj"
+dest_files=["res://.godot/imported/lake_sides.obj-615a328f6a1d2e74a8d93bc2b856dc4a.mesh", "res://.godot/imported/lake_sides.obj-615a328f6a1d2e74a8d93bc2b856dc4a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
