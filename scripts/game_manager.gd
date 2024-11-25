@@ -16,7 +16,7 @@ var flashlight_unlocked = false :
 
 var pencil = false  #don't have a use for this yet?
 var fishing_pole = false
-var umbrella = true
+var umbrella = false
 var book = false
 var documents = false
 
@@ -36,9 +36,6 @@ var clyde = false
 
 # Fishing ghost quest
 var fishing_quest_completed = false
-
-# Umbrella ghost quest
-var umbrella_quest_completed = false
 
 func increment_clues():
     clues = clues + 1
