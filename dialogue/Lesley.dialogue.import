@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://brubxotpbn8kx"
+path="res://.godot/imported/Lesley.dialogue-ba280f8cadf21f211cfcabe3c22be310.tres"
+
+[deps]
+
+source_file="res://dialogue/Lesley.dialogue"
+dest_files=["res://.godot/imported/Lesley.dialogue-ba280f8cadf21f211cfcabe3c22be310.tres"]
+
+[params]
+
+defaults=true

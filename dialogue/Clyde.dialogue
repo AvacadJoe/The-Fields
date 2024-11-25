@@ -1,7 +1,7 @@
 ~ clyde_dialogue
 Clyde: Helloooooo 
 Clyde: I'm a spooooky ghoooost
-if GameManager.ghost_hunt_started and GameManger.clyde == false
+if GameManager.ghost_hunt_started and GameManager.clyde == false
 	You: Your friend is looking for you by the entrance to the maze.
 	Clyde: Oooooh thank yoooooooou
 	do GameManager.clyde = true

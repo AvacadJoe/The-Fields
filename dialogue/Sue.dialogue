@@ -1,6 +1,6 @@
 ~ sue_dialogue
 Sue: Hi there!
-if GameManager.ghost_hunt_started and GameManger.sue == false
+if GameManager.ghost_hunt_started and GameManager.sue == false
 	You: Your friend is looking for you by the entrance to the maze.
 	Sue: Awww thanks!
 	do GameManager.sue = true

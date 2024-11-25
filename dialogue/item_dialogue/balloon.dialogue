@@ -1,0 +1,7 @@
+~ balloon_dialogue
+You: A balloon! It brings back memories of birthdays I had as a child. 
+You: Presents were nice, but I always enjoyed the simpler things more. Like just having fun with my friends. 
+do GameManager.hide_labels = false
+do GameManager.increment_clues()
+do GameManager.hide_item_viewer = true
+=> END

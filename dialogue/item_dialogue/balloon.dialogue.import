@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cbvj20r5dahwt"
+path="res://.godot/imported/balloon.dialogue-ba13fde2f9cd3d509d6c76979f8f0b9b.tres"
+
+[deps]
+
+source_file="res://dialogue/item_dialogue/balloon.dialogue"
+dest_files=["res://.godot/imported/balloon.dialogue-ba13fde2f9cd3d509d6c76979f8f0b9b.tres"]
+
+[params]
+
+defaults=true

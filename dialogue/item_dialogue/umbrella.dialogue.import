@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://pftkdmyckmb6"
+path="res://.godot/imported/umbrella.dialogue-3f6c2caa185aefc62a9a729da271dc39.tres"
+
+[deps]
+
+source_file="res://dialogue/item_dialogue/umbrella.dialogue"
+dest_files=["res://.godot/imported/umbrella.dialogue-3f6c2caa185aefc62a9a729da271dc39.tres"]
+
+[params]
+
+defaults=true

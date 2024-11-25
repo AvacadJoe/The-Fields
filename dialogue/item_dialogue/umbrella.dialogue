@@ -1,0 +1,6 @@
+~ umbrella_dialogue
+do GameManager.hide_labels = false
+do GameManager.increment_clues()
+do GameManager.hide_item_viewer = true
+do GameManager.fishing_pole = true
+=> END
