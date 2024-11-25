@@ -71,10 +71,7 @@ func reset_player():
 
 # Sun cycle loop
 func tween_up():
-    await get_tree().create_timer(sunlight_delay).timeout
-    
-    # Spring ghost settings: var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
-    # Standard ghost settings: var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+    await get_tree().create_timer(sunlight_delay).timeout    
     var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
     tween.tween_property(light, "rotation", Vector3(-70.0, 0.0, 0.0), day_time_length)
     tween.tween_callback(self.tween_down)    

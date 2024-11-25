@@ -1,16 +1,15 @@
 extends MeshInstance3D
 
 @export var delta_y = 0.5
-@export var ghost_delay = 0.5
+@export var ghost_delay = 0.2
 @export var float_time = 1
 @export var rotate_speed = 1
+@export var track_player_speed = 2
 @export var ghost_dialogue : DialogueResource
 @export var dialogue_title : String = "this_is_a_node_title"
 
 @onready var interact_area = $InteractArea
 @onready var interact_gizmo = $InteractIcon
-
-var track_player_speed = 2
 
 var interactable = false :
     set (value):

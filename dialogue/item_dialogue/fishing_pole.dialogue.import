@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://byplbd1yg08lo"
+path="res://.godot/imported/fishing_pole.dialogue-725b7954e1dcf09764c89c984b3a9561.tres"
+
+[deps]
+
+source_file="res://dialogue/item_dialogue/fishing_pole.dialogue"
+dest_files=["res://.godot/imported/fishing_pole.dialogue-725b7954e1dcf09764c89c984b3a9561.tres"]
+
+[params]
+
+defaults=true

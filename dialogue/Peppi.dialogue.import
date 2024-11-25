@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b1xuf3v8e26qf"
+path="res://.godot/imported/Peppi.dialogue-b748e899000879fb352a39ff79488882.tres"
+
+[deps]
+
+source_file="res://dialogue/Peppi.dialogue"
+dest_files=["res://.godot/imported/Peppi.dialogue-b748e899000879fb352a39ff79488882.tres"]
+
+[params]
+
+defaults=true

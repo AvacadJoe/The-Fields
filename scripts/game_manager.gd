@@ -14,7 +14,8 @@ var flashlight_unlocked = false :
     get:
         return flashlight_unlocked
 
-var pencil_unlocked = false  #don't have a use for this yet?
+var pencil = false  #don't have a use for this yet?
+var fishing_pole = false
 
 var hide_labels = false
 var hide_item_viewer = true
@@ -23,11 +24,16 @@ var hide_item_viewer = true
 var clues = 0
 var total_clues = 8
 
+# Maze ghost quests
 var ghost_hunt_started = false
 var pinky = false
 var inky  = false
 var sue = false
 var clyde = false
+
+# Fishing ghost quest
+var fishing_quest_completed = false
+
 
 func increment_clues():
     clues = clues + 1

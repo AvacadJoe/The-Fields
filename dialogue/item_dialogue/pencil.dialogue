@@ -5,5 +5,5 @@ You: I think... that I wish I got to do a lot more writing in my life than I was
 do GameManager.hide_labels = false
 do GameManager.increment_clues()
 do GameManager.hide_item_viewer = true
-do GameManager.pencil_unlocked  = true
+do GameManager.pencil  = true
 => END

@@ -6,6 +6,8 @@ extends MeshInstance3D
 @export var item_dialogue : DialogueResource
 @export var dialogue_title : String = "this_is_a_node_title"
 @export var item_scale = 0.5
+@export var y_offset : float = 0
+
 var fade_time = 1
 
 
@@ -37,7 +39,7 @@ func _body_exited(body):
 
 func view_item():
     %Player.interactable = false
-    %ItemViewer.update_mesh(self.mesh, item_scale)
+    %ItemViewer.update_mesh(self.mesh, item_scale, y_offset)
     GameManager.hide_labels = true
     var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
     tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 1), fade_time)
