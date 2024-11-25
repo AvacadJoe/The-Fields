@@ -1,6 +1,9 @@
 ~ umbrella_dialogue
+You: An umbrella. This would be useful for someone in this weather.
+You: I remember this umbrella, I gave it to a friend on a rainy day.
+You: I think my life had a lot of moments like that. I remember I was a very giving person.
 do GameManager.hide_labels = false
 do GameManager.increment_clues()
 do GameManager.hide_item_viewer = true
-do GameManager.fishing_pole = true
+do GameManager.umbrella = true
 => END

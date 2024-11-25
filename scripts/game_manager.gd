@@ -17,13 +17,15 @@ var flashlight_unlocked = false :
 var pencil = false  #don't have a use for this yet?
 var fishing_pole = false
 var umbrella = false
+var book = false
+var documents = false
 
 var hide_labels = false
 var hide_item_viewer = true
 
 # Quest variables
 var clues = 0
-var total_clues = 6
+var total_clues = 7
 
 # Maze ghost quests
 var ghost_hunt_started = true
@@ -34,6 +36,9 @@ var clyde = true
 
 # Fishing ghost quest
 var fishing_quest_completed = false
+
+# Umbrella ghost quest
+var umbrella_quest_completed = false
 
 func increment_clues():
     clues = clues + 1

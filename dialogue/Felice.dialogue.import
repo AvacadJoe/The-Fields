@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ewkrje41vbod"
+path="res://.godot/imported/Felice.dialogue-fb5cb3a7da56c954415721cd453e4fbb.tres"
+
+[deps]
+
+source_file="res://dialogue/Felice.dialogue"
+dest_files=["res://.godot/imported/Felice.dialogue-fb5cb3a7da56c954415721cd453e4fbb.tres"]
+
+[params]
+
+defaults=true

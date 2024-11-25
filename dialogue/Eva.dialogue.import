@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://j44lbdwa0arv"
+path="res://.godot/imported/Eva.dialogue-83988ad89d87eff25cbc0149171c2736.tres"
+
+[deps]
+
+source_file="res://dialogue/Eva.dialogue"
+dest_files=["res://.godot/imported/Eva.dialogue-83988ad89d87eff25cbc0149171c2736.tres"]
+
+[params]
+
+defaults=true

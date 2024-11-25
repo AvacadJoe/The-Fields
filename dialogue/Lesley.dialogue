@@ -9,6 +9,7 @@ else if GameManager.umbrella_quest_complete == false and GameManager.umbrella ==
 	Lesley: Wow, thank you! Here, I've been saving this for someone. I found it in the woods. 
 	do GameManager.umbrella = false
 	do GameManager.umbrella_quest_complete = true
+	do GameManager.book = true
 else if GameManager.umbrella_quest_complete == true
 	Lesley: The rain is kind of nice when its not getting me all wet.
 
