@@ -3,7 +3,7 @@ if GameManager.fishing_quest_completed == false and GameManager.fishing_pole == 
 	Peppi: I always say "Morning", instead of "Good Morning", cause if it was a good morning, I'd be fishin.
 	Peppi: I think I saw a fishing pole under one of these trees, I'd be mighty thankful if you brought it to me.
 	You: No problem!
-	Peppi: If only I had a flashlight so I could see easier.
+	Peppi: If only I had a flashlight so I could see a bit easier.
 else if GameManager.fishing_quest_completed == false and GameManager.fishing_pole == true
 	Peppi: You found it! I can't wait to get fishin'
 	do GameManager.fishing_pole = false

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cpbhwqunvmntq"
+path="res://.godot/imported/Teague.dialogue-7cf8e8c9d1607c2c532ca0ca7a748e55.tres"
+
+[deps]
+
+source_file="res://dialogue/Teague.dialogue"
+dest_files=["res://.godot/imported/Teague.dialogue-7cf8e8c9d1607c2c532ca0ca7a748e55.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://be1d0fumlbcem"
+path="res://.godot/imported/Parveen.dialogue-12fe0ab8be3d3687cdbe697d1e85ec1f.tres"
+
+[deps]
+
+source_file="res://dialogue/Parveen.dialogue"
+dest_files=["res://.godot/imported/Parveen.dialogue-12fe0ab8be3d3687cdbe697d1e85ec1f.tres"]
+
+[params]
+
+defaults=true

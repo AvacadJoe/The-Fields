@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cyert5o4x3geh"
+path="res://.godot/imported/Otto.dialogue-bb5938c8dd2b643c2b481ed638a47c7d.tres"
+
+[deps]
+
+source_file="res://dialogue/Otto.dialogue"
+dest_files=["res://.godot/imported/Otto.dialogue-bb5938c8dd2b643c2b481ed638a47c7d.tres"]
+
+[params]
+
+defaults=true

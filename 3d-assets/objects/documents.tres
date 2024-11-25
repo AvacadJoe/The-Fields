@@ -1,0 +1,79 @@
+[gd_resource type="ArrayMesh" load_steps=2 format=4 uid="uid://dugbuwvymvdgj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6w4f"]
+
+[resource]
+_surfaces = [{
+"aabb": AABB(-0.777153, 0.14106, -1, 1.50771, 0.929165, 2),
+"attribute_data": PackedByteArray("/9//f/+f/3//3/8//5//P/+f/z//X/8//58AAP9fAAD/n////1////+f/7//X/+//1//f/8f/3//X/8//x//P/+f/3//X/9//5//P/9f/z//n/+//1//v/+f/3//X/9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_f6w4f"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//wAA////////AAD//wAA////////////////////////////v///AAD///+/AAD//////78AAAAA////vwAA/////1TVAAAAAP//VNUAAP//AABU1QAAAAAAAFTV//8AAAAA/78AAAAAAAD/v///AAD///+/AAAAAP///7//////AABU1f//AAAAAFTV////////VNX//wAA//9U1QAA//8AAP//AAAAAAAA////////AAD/////AAAAAP///3//v/9//7//f/+//3//v/////////////////////9U1VTVVNVU1VTVVNVU1VTVAAD/fwAA/38AAP9/AAD/f6oqqiqqKqoqqiqqKqoqqir/v/+//7//v/+//7//v/+/")
+}, {
+"aabb": AABB(-0.993528, 0.494393, -1.14162, 1.94186, 0.046444, 2.28324),
+"attribute_data": PackedByteArray("/5////9f////n/+//1//v/+f/7//X/+//5//f/9f/3//n/9//1//f/+f/z//X/8//5//P/9f/z//nwAA/18AAP9f/3//H/9//1//P/8f/z//3/9//5//f//f/z//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_f6w4f"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//y3bgNoAAAAALduA2rI3//8AAIDasjcAAAAAgNqyN///AADe+bI3AAAAAN75/////9Ek3vn//wAA0STe+f/////RJIPQ//8AANEkg9BMyP////+D0EzIAAD//4PQTMj/////dcBMyAAA//91wAAA//8t23XAAAAAAC3bdcD//wAA0SR0wLI3AAAAAHTATMgAAP//dMAAAAAALdt0wLI3//8AAN75/////9Ek3vkAAP//Ldve+UzI/////975ZdJl0mXSZdJl0mXSZdJl0sA8wDzAPMA8wDzAPMA8wDyDJ4MngyeDJ4MngyeDJ4MnuvS69Lr0uvS69Lr0uvS69EQLiJZEC4iWRAuIlkQLiJY+w30GPsN9Bj7DfQY+w30G")
+}, {
+"aabb": AABB(-0.952272, 0.365527, -1.10598, 1.86254, 0.046445, 2.22866),
+"attribute_data": PackedByteArray("/5////9f////n/+//1//v/+f/7//X/+//5//f/9f/3//n/9//1//f/+f/z//X/8//5//P/9f/z//nwAA/18AAP9f/3//H/9//1//P/8f/z//3/9//5//f//f/z//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_f6w4f"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("Qy3/////jdFDLQAA//+N0QAA//9mHY3RAAAAAGYdjdEAAP//Zh07+wAAAABmHTv7u9L//wAAO/u70gAAAAA7+7vS//8AAFLZu9IAAAAAUtn/////mOJS2f//AACY4lLZ/////5jiRsD//wAAmOJGwEMt/////0bAQy0AAP//RsC70gAAAABGwAAAAABmHUbA//8AAJjiRsBDLQAA//9GwAAA//9mHTv7u9L//wAAO/tDLf////87+/////+Y4jv7wdfB18HXwdfB18HXwdfB14vCi8KLwovCi8KLwovCi8L2LPYs9iz2LPYs9iz2LPYsGgkaCRoJGgkaCRoJGgkaCTQS5XY0EuV2NBLldjQS5XYXhXO9F4VzvReFc70XhXO9")
+}, {
+"aabb": AABB(-1.0947, 0.268438, -1.12815, 1.88304, 0.046444, 2.24297),
+"attribute_data": PackedByteArray("/5////9f////n/+//1//v/+f/7//X/+//5//f/9f/3//n/9//1//f/+f/z//X/8//5//P/9f/z//nwAA/18AAP9f/3//H/9//1//P/8f/z//3/9//5//f//f/z//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_f6w4f"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/S//////SdH9LwAA//9J0QAA//9QH0nRAAAAAFAfSdEAAP//UB/j+gAAAABQH+P6AdD//wAA4/oB0AAAAADj+gHQ//8AAJ7ZAdAAAAAAntn/////ruCe2f//AACu4J7Z/////67gUcD//wAAruBRwP0v/////1HA/S8AAP//UcAB0AAAAABRwAAAAABQH1HA//8AAK7gUcD9LwAA//9RwAAA//9QH+P6AdD//wAA4/r9L//////j+v////+u4OP679fv1+/X79fv1+/X79fv17jCuMK4wrjCuMK4wrjCuMIfLR8tHy0fLR8tHy0fLR8tqgmqCaoJqgmqCaoJqgmqCVUTVHZVE1R2VRNUdlUTVHZyhUW9coVFvXKFRb1yhUW9")
+}, {
+"aabb": AABB(-0.747998, 0.684406, -1.06694, 1.75, 0.046444, 2.14788),
+"attribute_data": PackedByteArray("/5////9f////n/+//1//v/+f/7//X/+//5//f/9f/3//n/9//1//f/+f/z//X/8//5//P/9f/z//nwAA/18AAP9f/3//H/9//1//P/8f/z//3/9//5//f//f/z//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_f6w4f"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("yh3/////+dLKHQAA///50gAA///dEvnSAAAAAN0S+dIAAP//3RIP/QAAAADdEg/9NOL//wAAD/004gAAAAAP/TTi//8AAMTXNOIAAAAAxNf/////Ie3E1///AAAh7cTX/////yHtGsD//wAAIe0awMod/////xrAyh0AAP//GsA04gAAAAAawAAAAADdEhrA//8AACHtGsDKHQAA//8awAAA///dEg79NOL//wAADv3KHf////8O/f////8h7Q79ztbO1s7WztbO1s7WztbO1pbBlsGWwZbBlsGWwZbBlsEXLBcsFywXLBcsFywXLBcs7QXtBe0F7QXtBe0F7QXtBdsLEXrbCxF62wsRetsLEXoug2e+LoNnvi6DZ74ug2e+")
+}, {
+"aabb": AABB(-0.993528, 0.902082, -1.14162, 1.94186, 0.046444, 2.28324),
+"attribute_data": PackedByteArray("/5////9f////n/+//1//v/+f/7//X/+//5//f/9f/3//n/9//1//f/+f/z//X/8//5//P/9f/z//nwAA/18AAP9f/3//H/9//1//P/8f/z//3/9//5//f//f/z//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_f6w4f"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//y3bgNoAAAAALduA2rI3//8AAIDasjcAAAAAgNqyN///AADe+bI3AAAAAN75/////9Ek3vn//wAA0STe+f/////RJIPQ//8AANEkg9BMyP////+D0EzIAAD//4PQTMj/////dcBMyAAA//91wAAA//8t23XAAAAAAC3bdcD//wAA0SR0wLI3AAAAAHTATMgAAP//dMAAAAAALdt0wLI3//8AAN75/////9Ek3vkAAP//Ldve+UzI/////975ZdJl0mXSZdJl0mXSZdJl0sA8wDzAPMA8wDzAPMA8wDyDJ4MngyeDJ4MngyeDJ4MnuvS69Lr0uvS69Lr0uvS69EQLiJZEC4iWRAuIlkQLiJY+w30GPsN9Bj7DfQY+w30G")
+}]
+blend_shape_mode = 0
