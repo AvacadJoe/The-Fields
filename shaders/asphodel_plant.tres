@@ -3,7 +3,8 @@
 [ext_resource type="Shader" path="res://shaders/Asphodel.gdshader" id="1_eek7j"]
 
 [sub_resource type="Gradient" id="Gradient_ldmev"]
-colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.636364, 1)
+colors = PackedColorArray(0.38, 0.38, 0.38, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ufcew"]
 gradient = SubResource("Gradient_ldmev")

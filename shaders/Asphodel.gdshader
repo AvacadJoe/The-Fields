@@ -15,7 +15,7 @@ instance uniform vec3 player_position;
 void vertex() {
 	vec3 world_position = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz;
 
-	vec3 wind_texture = texture(wind_noise, world_position.xz * wind_noise_size + normalize(-wind_direction.xz) * (TIME + UV.y / 2.5) * wind_noise_speed).rgb;
+	vec3 wind_texture = texture(wind_noise, world_position.xz * wind_noise_size + normalize(-wind_direction.xz) * (TIME + UV.x / 2.5) * wind_noise_speed).rgb;
 	vec3 wind_vector = (vec4(wind_texture * normalize(wind_direction) * wind_strength, 0.0) * MODEL_MATRIX).xyz;
 
 	float player_height = smoothstep(1.0, 0.0, length(player_position.y - world_position.y + 0.3));
@@ -33,6 +33,6 @@ void vertex() {
 }
 
 void fragment() {
-	ALBEDO = texture(color_ramp, vec2(UV.y, 0)).rgb ;
+	ALBEDO = texture(color_ramp, vec2(UV.x, 0)).rgb ;
     //FOG = -FOG*fog_val;
 }

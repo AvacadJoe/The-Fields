@@ -1,6 +1,11 @@
-[gd_resource type="ArrayMesh" load_steps=2 format=4 uid="uid://dugbuwvymvdgj"]
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://dugbuwvymvdgj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6w4f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxn7d"]
+resource_name = "Material"
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+metallic = 0.5
 
 [resource]
 _surfaces = [{
@@ -69,7 +74,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
-"material": SubResource("StandardMaterial3D_f6w4f"),
+"material": SubResource("StandardMaterial3D_pxn7d"),
 "name": "Material",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
