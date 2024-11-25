@@ -16,7 +16,7 @@ var flashlight_unlocked = false :
 
 var pencil = false  #don't have a use for this yet?
 var fishing_pole = false
-var umbrella = false
+var umbrella = true
 var book = false
 var documents = false
 
@@ -28,11 +28,11 @@ var clues = 0
 var total_clues = 7
 
 # Maze ghost quests
-var ghost_hunt_started = true
-var pinky = true
-var inky  = true
-var sue = true
-var clyde = true
+var ghost_hunt_started = false
+var pinky = false
+var inky  = false
+var sue = false
+var clyde = false
 
 # Fishing ghost quest
 var fishing_quest_completed = false

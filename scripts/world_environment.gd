@@ -73,11 +73,12 @@ func reset_player():
 func tween_up():
     await get_tree().create_timer(sunlight_delay).timeout    
     var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-    tween.tween_property(light, "rotation", Vector3(-70.0, 0.0, 0.0), day_time_length)
+    #  Tweening light angles needs to be fixed
+    #tween.tween_property(light, "rotation", Vector3(-30.0, 0.0, 0.0), day_time_length)
     tween.tween_callback(self.tween_down)    
 
 func tween_down():
     await get_tree().create_timer(sunlight_delay).timeout
     var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-    tween.tween_property(light, "rotation", Vector3(-20, 0.0, 0.0), day_time_length)
+   # tween.tween_property(light, "rotation", Vector3(-20, 0.0, 0.0), day_time_length)
     tween.tween_callback(self.tween_up)    

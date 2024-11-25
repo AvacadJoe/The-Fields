@@ -1,0 +1,8 @@
+~ book_dialogue
+You: Is this... my first book! I remember I poured so much of myself into this.
+You: I thought it was brilliant but I guess no one else did. It never really caught on.
+You: But I never let that get me down, I kept on writing.  If I liked it, that was all that really mattered.
+do GameManager.hide_labels = false
+do GameManager.increment_clues()
+do GameManager.hide_item_viewer = true
+=> END
