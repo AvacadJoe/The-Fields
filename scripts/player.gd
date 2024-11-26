@@ -86,6 +86,12 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
     if mouse_captured: _handle_joypad_camera_rotation(delta)
+    
+    if walk_vel == Vector3(0,0,0) or jumping:
+        %WalkingSounds.stream_paused = true
+    else:
+        %WalkingSounds.stream_paused = false
+    
     velocity = _walk(delta) + _gravity(delta) + _jump(delta)
     if not in_convo:
         move_and_slide()

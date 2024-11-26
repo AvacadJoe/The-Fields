@@ -27,7 +27,7 @@ var hide_labels = false
 var hide_item_viewer = true
 
 # Quest variables
-var clues = 7
+var clues = 0
 var total_clues = 7
 
 # Maze ghost quests
@@ -42,7 +42,7 @@ var fishing_quest_completed = false
 
 # Game endings
 var ending_job = false
-var ending_stay = true
+var ending_stay = false
 var ending_leave = false
 
 func increment_clues():
