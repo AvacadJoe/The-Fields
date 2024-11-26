@@ -18,14 +18,12 @@ var resetting_player = false
 var rotated_player = false
 
 func _ready():
-    self.environment.volumetric_fog_enabled = true
+    #self.environment.volumetric_fog_enabled = true
+    var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+    tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 0), fade_time)
+    
     await get_tree().create_timer(120).timeout #120 second delay before starting the sun cycle
     self.tween_down() 
-    
-    #Fade in
-    var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
-    %FadeRect.color = Color(0, 0, 0, 1)
-    tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 0), fade_time)
     pass
 
 func _process(delta):

@@ -27,6 +27,8 @@ You: Asphodel Meadows... it's coming back to me a bit. So I'm dead?
 	???: I'm not sure how long any of us have been here.  It all... blurs together after a while.
 - Leave
 	???: Come talk to me again if you have any trouble finding the other spirits.
-	???: I'll be seeing you around. => END
+	???: I'll be seeing you around. 
+	do GameManager.clues_visible = true
+	=> END
 => convo_loop
 => END

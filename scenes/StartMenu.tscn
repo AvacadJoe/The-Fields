@@ -2,16 +2,11 @@
 
 [ext_resource type="ArrayMesh" uid="uid://c1l51pyqvnu54" path="res://blender-assets/ghost.obj" id="1_1igi8"]
 [ext_resource type="Material" uid="uid://b080bqfeqvnc5" path="res://shaders/viewport.tres" id="1_ed7lh"]
+[ext_resource type="Environment" uid="uid://corwca1d6oeyh" path="res://scenes/world_env.tres" id="1_qfnn6"]
 [ext_resource type="Script" path="res://scripts/LoadingGhost.gd" id="2_be8ls"]
 [ext_resource type="Theme" uid="uid://ckuambmp8imqj" path="res://ui-assets/demichrome_theme.tres" id="2_tjpc4"]
 [ext_resource type="Script" path="res://scripts/play_button.gd" id="3_4e0vb"]
 [ext_resource type="Script" path="res://scripts/quit_button.gd" id="4_5u6kr"]
-
-[sub_resource type="Environment" id="Environment_ikud3"]
-background_mode = 1
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.3
-volumetric_fog_temporal_reprojection_enabled = false
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q4ohr"]
 
@@ -24,7 +19,8 @@ albedo_color = Color(0, 0, 0, 1)
 [node name="StartMenu" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ikud3")
+unique_name_in_owner = true
+environment = ExtResource("1_qfnn6")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90025, 0, 5.40477)
@@ -33,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90025, 0, 5.40477)
 unique_name_in_owner = true
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(1, 1, 1, 0)
+color = Color(0, 0, 0, 0)
 
 [node name="QuantDitherShader" type="ColorRect" parent="."]
 material = ExtResource("1_ed7lh")

@@ -29,6 +29,7 @@ var hide_item_viewer = true
 # Quest variables
 var clues = 0
 var total_clues = 7
+var clues_visible = false
 
 # Maze ghost quests
 var ghost_hunt_started = false
