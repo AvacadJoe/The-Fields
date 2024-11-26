@@ -16,12 +16,16 @@ var interactable = false :
         interactable = value
     get:
         return interactable
-        
-func _process(delta):
-    _turn_to_player(delta)
+
+func _ready():
+    %Player.interact.connect(_interact)    
     interact_area.body_entered.connect(_body_entered)
     interact_area.body_exited.connect(_body_exited)
-    %Player.interact.connect(_interact)    
+    
+func _process(delta):
+    _turn_to_player(delta)
+    
+   
    
 func _body_entered(body):
     if body == %Player:

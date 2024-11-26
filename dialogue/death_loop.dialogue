@@ -18,7 +18,11 @@
 	???: It may seem bleak, but I choose to see it as a place of quiet contemplation.
 - Where are the other spirits?
 	You: Where can I find one of the other spirits?
-	???: Here, I'll guide you in the direction of one of them.
+	if GameManager.all_ghosts_found == false
+		???: Here, I'll guide you in the direction of one of them.
+		do GameManager.search_ghosts = true
+	else
+		???: Hmmm, you seem to have found all of them. Have you gotten any closer to finding your answers?
 - How long have I been here?
 	You: How long have I been here?
 	???: I'm not sure how long any of us have been here.  It all... blurs together after a while.

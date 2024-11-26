@@ -74,6 +74,7 @@ func tween_down():
 func _interact():
     
     if interactable:
+        self.remove_from_group("NeedyGhosts")
         %DialogueMenu.start(ghost_dialogue.duplicate(), dialogue_title)
         
     pass

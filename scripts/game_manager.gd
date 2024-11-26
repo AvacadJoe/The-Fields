@@ -13,13 +13,16 @@ var flashlight_unlocked = false :
         flashlight_unlocked = value
     get:
         return flashlight_unlocked
-
+# Item Globals
 var pencil = false  #don't have a use for this yet?
 var fishing_pole = false
 var umbrella = false
 var book = false
 var documents = false
 
+# Function Globals
+var search_ghosts = false
+var all_ghosts_found = false
 var hide_labels = false
 var hide_item_viewer = true
 
