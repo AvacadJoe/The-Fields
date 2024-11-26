@@ -1,9 +1,61 @@
 ~ death_loop
 ???: Ah, you're back.
 ~ convo_loop
+if GameManager.ending_dialogue == true
+	=> decision_loop
+	
+- I found all the clues [if GameManager.clues == GameManager.total_clues]
+	You: I found all the clues.
+	???: Good, now that you've discovered everything, who do you think you are?
+	You: I remember I was a writer first, and that… never quite worked out for me.  I became a teacher later to help pay the bills.  I thought I had it in me to be so much more. 
+	You: I reached for the stars and I ended up falling back down to earth.
+	???: Would you rather never have reached for the stars?
+	You: No, I’m glad that I tried.  I would regret it even more if I had never taken that chance with my life.
+	???: The things you wrote never reached a great audience, yet you were resilient. You created despite that.  And you touched the lives of so many of your students, helped them in ways you would never get to see.
+	You: So… I was just a normal person then. I guess I deserve to be here.
+	???: Let me tell you a secret, young one. No soul deserves to be here.
+	You: I still don't understand.
+	???: You still don’t see it.  The actions you took in your life affected so many others.
+	???: Heroic acts are so much more than slaying hydras. It’s the little things in life that matter, the things you do every day that show you care.  Those mundane acts are the things that keep the world together. 
+	???: The fact that you managed to do those things for others, while you struggled with so much yourself. That is true heroism.
+	???: You have earned your place in the Elysian fields, should you choose to take it this time.
+	You: This time?
+	???: Sadly, this isn’t the first time we’ve had this conversation. But do not fret, it’s been nice having someone around to help the other spirits.
+	~ decision_loop	
+	???: So, do you know what YOU want?
+	- I want to forget my burdens
+		You: It's still too painful. I need to forget again, I'm sorry.
+		???: Do not be sorry, young one. Death, unlike life, shall grant you another chance.
+		do GameManager.ending_stay = true
+		=> END
+	- I am ready to move on
+		You: I am ready to move on to whatever is next
+		???: Very good, I'm proud of you for coming to that decision. Always remember to hold your head high be proud of the life you lived. The journey matters much more than the destination. 
+		???: You have earned your rest hero.
+		do GameManager.ending_leave = true
+		=> END
+	- Is there a job opening?
+		You: I think that I might like doing what you're doing, helping the spirits here. 
+		???: An interesting idea, I think I would appreciate the help. 
+		???: Are you certain you want to stay? I will not remove your memories again, and you will have to remain in this place for eternity, never to see the Elysian Fields.
+		- I'm sure
+			You: I'm certain of my choice
+			???: Very well. It shall be done. 
+			???: We'll have to find you one of these robes.
+			do GameManager.ending_job = true
+			=> END
+		- I need more time to think
+			You: I need more time to think
+			=> decision_loop
+	- I need more time to think
+		You: I... need some more time to think.
+		???: That's alright, time is all we have here.
+		do GameManager.ending_dialogue = true
+		=> END
 - Who are you?
 	You: And who are you?
-	???: I'm just a traveler here, think of me as a guide to this place.
+	???: I'm just a traveler here, I collect the stories of the dead, such as yourself.
+	???: Think of me as a guide to this place.
 - Why am I here?
 	You: What am I doing here?
 	???: Hmmm. A good question, and one I think you'll need to figure it out yourself.
@@ -28,6 +80,6 @@
 	???: I'm not sure how long any of us have been here.  It all... blurs together after a while.
 - Leave
 	???: Come talk to me again if you have any trouble finding the other spirits.
-	???: I'll be seeing you. => END
+	=> END
 => convo_loop
 => END
