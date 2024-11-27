@@ -86,6 +86,12 @@ func _unhandled_input(event: InputEvent) -> void:
     if Input.is_action_just_pressed("interact"): interact.emit()
     if Input.is_action_just_pressed("balloon") and is_on_floor() and GameManager.balloon_unlocked: balloon_active = not balloon_active
     if Input.is_action_just_pressed("flashlight") and GameManager.flashlight_unlocked: flashlight_active = not flashlight_active
+    if Input.is_action_just_pressed("menu"): 
+        %EscMenu.visible = not %EscMenu.visible
+        if %EscMenu.visible:
+            release_mouse()
+        else:
+            capture_mouse()
 
 func _physics_process(delta: float) -> void:
     if mouse_captured: _handle_joypad_camera_rotation(delta)

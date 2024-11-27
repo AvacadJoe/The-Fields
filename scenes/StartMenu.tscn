@@ -72,13 +72,13 @@ script = ExtResource("4_5u6kr")
 [node name="Title" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
 offset_left = 1118.0
-offset_top = 254.0
+offset_top = 377.0
 offset_right = 1747.0
 offset_bottom = 483.0
 theme = ExtResource("2_tjpc4")
 theme_override_font_sizes/normal_font_size = 72
 bbcode_enabled = true
-text = "[center]The Asphodel Meadows"
+text = "[center]The Meadows"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(20, 0, 0, 0, -1.08332, -19.9706, 0, 19.9706, -1.08332, 2.1962, 0, -5.6496)

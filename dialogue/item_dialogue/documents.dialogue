@@ -1,8 +1,8 @@
-~ fishing_pole_dialogue
+~ documents_dialogue
 You: Is this? 
 You: Hahahaha a stack of graded papers!
 You: This is a huge pile, but it barely scratches the surface of all the papers I graded in my life.
-You: I must have been a teacher then, I hope my students all did more with their lives than me.
+You: I must have been a teacher. I hope my students all did more with their lives than me.
 do GameManager.hide_labels = false
 do GameManager.increment_clues()
 do GameManager.hide_item_viewer = true

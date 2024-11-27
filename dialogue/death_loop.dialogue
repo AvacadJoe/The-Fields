@@ -26,12 +26,14 @@ if GameManager.ending_dialogue == true
 	- I want to forget my burdens
 		You: It's still too painful. I need to forget again, I'm sorry.
 		???: Do not be sorry, young one. Death, unlike life, shall grant you another chance.
+		do GameManager.hide_labels = true
 		do GameManager.ending_stay = true
 		=> END
 	- I am ready to move on
 		You: I am ready to move on to whatever is next
 		???: Very good, I'm proud of you for coming to that decision. Always remember to hold your head high be proud of the life you lived. The journey matters much more than the destination. 
 		???: You have earned your rest hero.
+		do GameManager.hide_labels = true
 		do GameManager.ending_leave = true
 		=> END
 	- Is there a job opening?
@@ -42,6 +44,7 @@ if GameManager.ending_dialogue == true
 			You: I'm certain of my choice
 			???: Very well. It shall be done. 
 			???: We'll have to find you one of these robes.
+			do GameManager.hide_labels = true
 			do GameManager.ending_job = true
 			=> END
 		- I need more time to think

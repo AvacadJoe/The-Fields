@@ -9,6 +9,8 @@ extends WorldEnvironment
 @export var game_area_radius = 200
 @export var day_time_length = 100
 @export var sunlight_delay = 10
+@export var light_start_angle = -70
+@export var light_end_angle = -160
 @export var fade_time = 2
 @export var starting_position = Vector3(0,0,0)
 @export var starting_rotation = Vector3(0,-85.5,0)
@@ -23,14 +25,14 @@ func _ready():
     tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 0), fade_time).set_delay(1)
     await get_tree().create_timer(1).timeout 
     self.environment.volumetric_fog_enabled = true
-    await get_tree().create_timer(120).timeout #120 second delay before starting the sun cycle
+    await get_tree().create_timer(sunlight_delay).timeout #120 second delay before starting the sun cycle
     self.tween_down() 
     pass
 
 func _process(delta):
     
     if %RainSounds.playing == false:
-        %RaindSounds.playing = true
+        %RainSounds.playing = true
     
     var player_dist_from_center_x = absf(global_center.x-%Player.global_position.x)
     var player_dist_from_center_z = absf(global_center.z-%Player.global_position.z)
@@ -82,11 +84,11 @@ func tween_up():
     await get_tree().create_timer(sunlight_delay).timeout    
     var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
     #  Tweening light angles needs to be fixed
-    #tween.tween_property(light, "rotation", Vector3(-30.0, 0.0, 0.0), day_time_length)
+    tween.tween_property(light, "rotation", Vector3(deg_to_rad(light_end_angle), 0.0, 0.0), day_time_length)
     tween.tween_callback(self.tween_down)    
 
 func tween_down():
     await get_tree().create_timer(sunlight_delay).timeout
     var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-   # tween.tween_property(light, "rotation", Vector3(-20, 0.0, 0.0), day_time_length)
+    tween.tween_property(light, "rotation", Vector3(deg_to_rad(light_start_angle), 0.0, 0.0), day_time_length)
     tween.tween_callback(self.tween_up)    
