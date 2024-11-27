@@ -2,13 +2,13 @@ extends Node
 
 enum Items {DEFAULT, FLASHLIGHT, BALLOON}
 
-var balloon_unlocked = false :
+var balloon_unlocked = true :
     set (value):
         balloon_unlocked = value
     get:
         return balloon_unlocked
 
-var flashlight_unlocked = false :
+var flashlight_unlocked = true :
     set (value):
         flashlight_unlocked = value
     get:

@@ -29,16 +29,19 @@ var balloon_active = false :
         balloon_active = value
         balloon_mesh.visible = value
         if value:
+            %BalloonInflateSound.playing = true
             %BalloonLabel.text = "[center]Press B to deflate balloon[/center]"
         else:
+            %BalloonDeflateSound.playing = true
             %BalloonLabel.text = "[center]Press B to inflate balloon[/center]"
     get:
         return balloon_active
         
 var flashlight_active = false :
     set (value):
-        flashlight_active = value
-        flash_light.visible = value
+        flashlight_active    = value
+        flash_light.visible  = value
+        %SwitchSound.playing = true
         if value:
             %FlashlightLabel.text = "[center]Press F to turn off flashlight[/center]"
         else:
@@ -87,10 +90,13 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
     if mouse_captured: _handle_joypad_camera_rotation(delta)
     
-    if walk_vel == Vector3(0,0,0) or jumping:
+    if walk_vel == Vector3(0,0,0):
         %WalkingSounds.stream_paused = true
-    else:
+    elif is_on_floor() and not in_convo:
         %WalkingSounds.stream_paused = false
+        if  %WalkingSounds.playing == false:
+            %WalkingSounds.playing = true
+
     
     velocity = _walk(delta) + _gravity(delta) + _jump(delta)
     if not in_convo:
@@ -135,10 +141,13 @@ func _gravity(delta: float) -> Vector3:
 
 func _jump(delta: float) -> Vector3:
     if jumping:
-        if is_on_floor(): 
+        if is_on_floor():
+            %WalkingSounds.stream_paused = true
             if balloon_active:
+                %BalloonJumpSound.playing = true
                 jump_vel = Vector3(0, sqrt(4 * balloon_jump_height * balloon_gravity), 0)
             else:
+                %JumpSound.playing = true
                 jump_vel = Vector3(0, sqrt(4 * jump_height * gravity), 0)
                 
         jumping = false

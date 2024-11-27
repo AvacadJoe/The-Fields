@@ -18,15 +18,20 @@ var resetting_player = false
 var rotated_player = false
 
 func _ready():
-    #self.environment.volumetric_fog_enabled = true
-    var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
-    tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 0), fade_time)
     
+    var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+    tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 0), fade_time).set_delay(1)
+    await get_tree().create_timer(1).timeout 
+    self.environment.volumetric_fog_enabled = true
     await get_tree().create_timer(120).timeout #120 second delay before starting the sun cycle
     self.tween_down() 
     pass
 
 func _process(delta):
+    
+    if %RainSounds.playing == false:
+        %RaindSounds.playing = true
+    
     var player_dist_from_center_x = absf(global_center.x-%Player.global_position.x)
     var player_dist_from_center_z = absf(global_center.z-%Player.global_position.z)
     var player_dist_from_center = player_dist_from_center_z
