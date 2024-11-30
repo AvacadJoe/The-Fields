@@ -86,6 +86,7 @@ mesh = SubResource("PlaneMesh_q4ohr")
 surface_material_override/0 = SubResource("StandardMaterial3D_u0518")
 
 [node name="Ghost" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(0.248652, 0.00434024, 0.968583, -0.0174524, 0.999848, 0, -0.968436, -0.0169041, 0.24869, 0, -0.125, 0)
 mesh = ExtResource("1_1igi8")
 surface_material_override/1 = SubResource("StandardMaterial3D_5bvq1")

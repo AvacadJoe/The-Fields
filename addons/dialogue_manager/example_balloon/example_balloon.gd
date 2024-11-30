@@ -42,10 +42,19 @@ var dialogue_line: DialogueLine:
 
         character_label.visible = not dialogue_line.character.is_empty()
         character_label.text = tr(dialogue_line.character, "dialogue")
-
+        
+        if dialogue_line.character  == "You":
+            player_panel.show()
+            npc_panel.hide()
+        else:
+            player_panel.hide()
+            npc_panel.show()
+        
         dialogue_label.hide()
+        player_dialogue_label.hide()
         dialogue_label.dialogue_line = dialogue_line
-
+        player_dialogue_label.dialogue_line = dialogue_line
+        
         responses_menu.hide()
         responses_menu.set_responses(dialogue_line.responses)
 
@@ -53,11 +62,18 @@ var dialogue_line: DialogueLine:
         balloon.show()
         will_hide_balloon = false
 
-        dialogue_label.show()
-        if not dialogue_line.text.is_empty():
-            dialogue_label.type_out()
-            await dialogue_label.finished_typing
-
+        if dialogue_line.character  == "You":
+            player_dialogue_label.show()
+            if not dialogue_line.text.is_empty():
+                player_dialogue_label.type_out()
+                await player_dialogue_label.finished_typing
+        else: 
+            dialogue_label.show()
+            player_dialogue_label.show()
+            if not dialogue_line.text.is_empty():
+                dialogue_label.type_out()
+                await dialogue_label.finished_typing            
+            
         # Wait for input
         if dialogue_line.responses.size() > 0:
             balloon.focus_mode = Control.FOCUS_NONE
@@ -81,6 +97,9 @@ var dialogue_line: DialogueLine:
 
 ## The label showing the currently spoken dialogue
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
+@onready var player_dialogue_label: DialogueLabel = %PlayerDialogueLabel
+@onready var player_panel = %PlayerPanel
+@onready var npc_panel = %Panel
 
 ## The menu of responses
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu

@@ -26,6 +26,7 @@ You: Asphodel Meadows... it's coming back to me a bit. So I'm dead?
 	You: How long have I been here?
 	???: I'm not sure how long any of us have been here.  It all... blurs together after a while.
 - Leave
+	???: Go search for the clues to your past, and talk to the other spirits here for hints.
 	???: Come talk to me again if you have any trouble finding the other spirits.
 	???: I'll be seeing you around. 
 	do GameManager.clues_visible = true

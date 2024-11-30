@@ -10,5 +10,7 @@ func _button_pressed():
     %QuitButton.hide()
     %Title.hide()
     await get_tree().create_timer(2).timeout
+    if %Ghost.tween:
+        %Ghost.tween.kill()
     %WorldEnvironment.environment.volumetric_fog_enabled = false
     get_tree().change_scene_to_file("res://scenes/main_scene.tscn")

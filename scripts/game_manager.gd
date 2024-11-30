@@ -13,6 +13,11 @@ var flashlight_unlocked = false :
         flashlight_unlocked = value
     get:
         return flashlight_unlocked
+        
+        
+# Settings
+var camera_sens = 1.0
+
 # Item Globals
 var pencil = false  #don't have a use for this yet?
 var fishing_pole = false

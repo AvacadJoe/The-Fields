@@ -9,6 +9,7 @@ extends MeshInstance3D
 var cur_y
 var cur_z
 var cur_x
+var tween
 
 func _ready():
     cur_z = self.position.z
@@ -39,13 +40,13 @@ func tween_up():
     var new_y = delta_y + cur_y
     # Spring ghost settings: var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
     # Standard ghost settings: var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-    var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+    tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
     tween.tween_property(self, "position", Vector3(cur_x, new_y, cur_z), float_time)
     tween.tween_callback(self.tween_down)    
 
 func tween_down():
     await get_tree().create_timer(ghost_delay).timeout
-    var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+    tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
     tween.tween_property(self, "position", Vector3(cur_x, cur_y, cur_z), float_time)
     tween.tween_callback(self.tween_up)    
     
