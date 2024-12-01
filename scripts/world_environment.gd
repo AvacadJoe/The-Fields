@@ -44,11 +44,7 @@ func _process(delta):
     
     # Start the fog / darkening effect outside of game_area_radius
     if (player_dist_from_center > game_area_radius + fog_width and not resetting_player):
-        #Tween the light down, and then teleport the player to the game center, then tween light back up
-        resetting_player = true
-        var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
-        tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 1), fade_time)
-        tween.tween_callback(self.reset_player)    
+        fade_to_reset()
     elif (player_dist_from_center > game_area_radius):
         var player_dist_from_game_area = clampf((player_dist_from_center-game_area_radius)/fog_width,0, 1.0)
         self.light.light_energy = lerpf(starting_light_energy, ending_light_energy, player_dist_from_game_area)
@@ -58,7 +54,13 @@ func _process(delta):
         self.environment.volumetric_fog_density = starting_fog_density
         
     pass
-    
+
+func fade_to_reset():
+    #Tween the light down, and then teleport the player to the game center, then tween light back up
+    resetting_player = true
+    var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+    tween.tween_property(%FadeRect, "color", Color(0, 0, 0, 1), fade_time)
+    tween.tween_callback(self.reset_player)  
 
 func reset_player():
     #print("reset_player")

@@ -31,14 +31,15 @@ var balloon_active = false :
         if value:
             %BalloonInflateSound.playing = true
             balloon_mesh.visible = value
-            balloon_mesh.transform = Vector3(0.1,0.1,0.1)
+            balloon_mesh.scale = Vector3(0.1,0.1,0.1)
             var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-            tween.tween_property(self, "transform", Vector3(0.5,0.5,0.5), 1)
-            #tween.tween_property(balloon_mesh, "visible", value)
+            tween.tween_property(balloon_mesh, "scale", Vector3(0.5,0.5,0.5), 1)
             %BalloonLabel.text = "[center]Press B to deflate balloon[/center]"
-            
         else:
             %BalloonDeflateSound.playing = true
+            var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+            tween.tween_property(balloon_mesh, "scale", Vector3(0.1,0.1,0.1), 1)
+            tween.tween_property(balloon_mesh, "visible", value, 0)
             %BalloonLabel.text = "[center]Press B to inflate balloon[/center]"
     get:
         return balloon_active
